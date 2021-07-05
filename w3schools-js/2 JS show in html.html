@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JS output in 4 ways</h1>
+        <p>1 window.alert</p>
+        <script >
+            window.alert(5+6);// show in brower
+        </script>
+        <p id="monkey">2 innerHTML</p>
+        <script>
+            document.getElementById("monkey").
+            innerHTML="innerHTML is the normal way to show data.";
+</script>
+<p id="monkey2"></p>
+<script>document.getElementById("monkey2").innerHTML=5+5+"=5+5";
+</script>
+<script>
+            document.write(7+8)
+        </script>
+        <p>document.write is only for test. USE IT CAUTIOUSLY!</p>
+        <p>4 console.log F12 debugger "console"</p>
+    <script>
+            console.log(5+6);
+        </script>
+    </body>
+</html>
