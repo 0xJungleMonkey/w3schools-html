@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <p id = "monkey"></p>
+    <script>
+        //create objects
+        var car = {type:"porsche",model:"911",color:"white"};
+
+        // Display the data in the object:
+        document.getElementById("monkey").
+        innerHTML = car.type + " is "  + car.color;
+    // objectName.propertyName    or   objectname["propertyName"]
+    </script>
+    <p id ="demo"></p>
+    <script>
+        var person = {
+            firstName: "Bill",
+            lastName: "Gates",
+            id: 12345,
+            fullName:function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        document.getElementById("demo").innerHTML = person.fullName() + person["id"];
+    </script>
+</html>
