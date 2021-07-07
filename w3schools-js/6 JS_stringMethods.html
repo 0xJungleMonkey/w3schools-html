@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1> JavaScript String property</h1>
+        <p> 1. length property </p>
+        <p id="demo"></p>
+        <script>
+            var txt = 
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("demo").innerHTML=txt.length;
+        </script>
+
+        <p>2. indexOf() method: first time </p>
+        <!-- indexOf() right  indexof() wrong-->
+        <p id="demo2"></p>
+        <script>
+            var str1 = "The full name of China is the people's Republic of China.";
+            var pos1 = str1.indexOf("China");
+            document.getElementById("demo2").innerHTML = pos1;
+        </script>
+        <p>indexOf method accpet 2 parameters </p>
+        <p id="demo3"></p>
+        <script>
+            var str2 = "The full name of China is the people's Republic of China.";
+            var pos2 = str2.indexOf("China",18);
+            document.getElementById("demo3").innerHTML = pos2;
+
+        </script>
+
+        <p>3. lastIndexOf() the last time </p>
+        <p id="demo4"></p>
+        <script>
+            var str3 = "The full name of China is the People's Republic of China.";
+            var pos3 = str3.lastIndexOf("China");
+            document.getElementById("demo4").innerHTML = pos3;
+        </script>
+
+        <p>4. lastIndexOf() accept 2nd parameter</p>
+        <p id = "demo5"></p>
+        <script>
+            var str4 = "The full name of China is the People's Republic of China.";
+            var pos4 = str4.lastIndexOf("China",50);
+            document.getElementById("demo5").innerHTML = pos4;
+        </script>
+        <p>5. search()method [= indexOf()]</p>
+        <p id = "demo6"></p>
+        <script>
+            var str5 = "The full name of China is the People's Republic of China.";
+            var pos5 = str5.search("China");
+            document.getElementById("demo6").innerHTML = pos5;
+        </script>
+        <h2> Slice() method         </h2>
+        <p> slice(start,end) <br>
+        substring(start,end)<br></p>
+
+
+
+    
+    </body>
+</html>
