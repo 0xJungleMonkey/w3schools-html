@@ -29,6 +29,40 @@
             var x = 100 / "10";
             document.getElementById("demo3").innerHTML = isNaN(x);
         </script>
+        
+        <h1> Infinity (or -Infinity)</h1>
+        <p id="demo7"></p>
+        <script>
+            var myNumber = 2;
+            var txt = "";
+            while (myNumber != Infinity){
+                myNumber = myNumber * myNumber;
+                txt = txt + myNumber +"<br>";
+            }
+            document.getElementById("demo7").innerHTML
+             = txt;
+        </script>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+        <script>
+            var x = 2/0;
+            var y = -2/0;
+            document.getElementById("demo8").innerHTML = x +"<br>"
+            + y;
+            document.getElementById("demo9").innerHTML = typeof Infinity;
+
+        </script>
+        <p id="demo10"></p>
+        <script>
+            var x = 0xFF;
+            document.getElementById("demo10").innerHTML = "0xFF = " + x;
+        </script>
+        <p id="demo11"></p>
+        <script>
+            var x = 123;
+            var y = new Number(123);
+            document.getElementById("demo11").innerHTML = typeof x +"<br>" +typeof y +"<br>" + (x==y);
+        </script>
        
     </body>
 </html>

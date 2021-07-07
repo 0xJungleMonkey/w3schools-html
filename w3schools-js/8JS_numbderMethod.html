@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>1.toString Method</h1>
+        <p id="demo"></p>
+        <script>
+            var myNumber = 32;
+            document.getElementById("demo").innerHTML = "32 = "+"<br>"+" Decimal " + myNumber.toString(10) + "<br>" +" Hexadecimal " + myNumber.toString(16) + "<br>" + " Octal " + myNumber.toString(8) + "<br>" + " Binary " + myNumber.toString(2); 
+        </script>
+        <h1>2. toExponential Method</h1>
+        <p id = "demo1"></p>
+        <script>
+            var x = 9.656;
+            document.getElementById("demo1").innerHTML = 
+            x.toExponential() + "<br>" +
+            x.toExponential(2) + "<br>" + 
+            x.toExponential(4) + "<br>" +
+            x.toExponential(6);
+        </script>
+        <h1>3. toFixed()</h1>
+        <p id = "demo2"></p>
+        <script>
+            var x = 9.656;
+            document.getElementById("demo2").innerHTML = 
+            x.toFixed(0) + "<br>" +
+            x.toFixed(2) + "<br>" +
+            x.toFixed(4) + "<br>" +
+            x.toFixed(6);
+        </script>
+        <h1>4. toPrecision Method</h1>
+        <p id = "demo3"></p>
+        <script>
+            var x = 9.656;
+            document.getElementById("demo3").innerHTML = 
+            x.toPrecision() + "<br>" +
+            x.toPrecision(2) + "<br>" +
+            x.toPrecision(4) + "<br>" +
+            x.toPrecision(6);
+        </script>
+        <h1>5. valueOf Method</h1>
+        <p id = "demo4"></p>
+        <script>
+            var x = 123;
+            document.getElementById("demo").innerHTML = 
+            x.valueOf() + "<br>" +
+            (123).valueOf() + "<br>" + 
+            (100 +23).valueOf();
+        </script>
+        <h1>6. number method</h1>
+        <p id="demo5"></p>
+        <script>
+            var x = new Date("2017-09-30");
+            document.getElementById("demo5").innerHTML = 
+            Number(true) + "<br>" +
+            Number(false) + "<br>" +
+            Number("10") + "<br>" +
+            Number("   10")+"<br>" +
+            Number(" 10   ")+"<br>" +
+            Number("10.33")+"<br>" +
+            Number("10,33")+"<br>" + 
+            Number("10 33") + "<br>" +
+            Number("John") + "<br>" +
+            Number(x);
+
+        </script>
+        <h1>7. parseInt Method</h1>
+        <p id="demo6"></p>
+        <script>
+            document.getElementById("demo6").innerHTML = 
+            parseInt("10") + "<br>" +
+            parseInt("10.33") +"<br>" +
+            parseInt("10 6") + "<br>" +
+            parseInt("10 years") + "<br>" +
+            parseInt("years 10 ");
+        </script>
+        <h1>8. parseFloat Method </h1>
+        <p id="demo7"></p>
+        <script>
+            document.getElementById("demo7").innerHTML = 
+            parseFloat("10") + "<br>" +
+            parseFloat("10.33") + "<br>" +
+            parseFloat("10 6") + "<br>" +
+            parseFloat("10 years") +"<br>" +
+            parseFloat("years 10 ");
+        </script>
+        <h1>9. number property</h1>
+        <p>MIN_VALUE and MAX_VALUE</p>
+        <p id="demo8"></p>
+        <script>
+            var x = Number.MAX_VALUE;
+            var y = Number.MIN_VALUE;
+            document.getElementById("demo8").innerHTML = x + "<br>" +
+            y;
+        </script>
+        <h1>10. Positive_Infinity & Negative_Infinity</h1>
+        <p id="demo9"></p>
+        <script>
+            var x = Number.POSITIVE_INFINITY
+            var y = Number.NEGATIVE_INFINITY;
+            document.getElementById("demo9").innerHTML = x + "<br>" +
+            y;
+        </script>
+        <p id = "demo10"></p>
+        <script>
+            var x = 1/0;
+            var y = -1/0;
+            document.getElementById("demo10").innerHTML = x + "<br>" +
+            y;
+        </script>
+        <h1> 11. NaN</h1>
+        <p id = "demo11"></p>
+        <script>
+            document.getElementById("demo11").innerHTML = Number.NaN + "<br>" +
+            100/"Apple";
+        </script>
+        <h1>Number Object Property</h1>
+        <p id = "demo12"></p>
+        <script>
+            var x = 6;
+            document.getElementById("demo12").innerHTML = x.MAX_VALUE + "<br>"+
+            x.MIN_VALUE;
+        </script>
+    </body>
+</html>
