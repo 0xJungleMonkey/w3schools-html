@@ -49,12 +49,99 @@
             var pos5 = str5.search("China");
             document.getElementById("demo6").innerHTML = pos5;
         </script>
-        <h2> Slice() method         </h2>
+        <h2> 6. Slice() method         </h2>
         <p> slice(start,end) <br>
-        substring(start,end)<br></p>
+        substring(start,end)<br>
+        substr(start, length)</p>
+        <p> slice method </p>
+        <p id= "demo7"></p>
+        <script>
+            var str6= "Apple, Banana,Mango";;
+            var res= str6.slice(7,13);
+            document.getElementById("demo7").innerHTML = res;
+        </script>
+        <script>
+            var str7="Apple,Banana,Mango";
+            var res2=str7.slice(-12);
+            document.getElementById(id="demo7").innerHTML=res2;
 
+        </script>
+        <p>. substring method (start>=0;end>=0)</p>
+        <p>. substr() method </p>
+        <p id = "demo8"></p>
+        <script>
+            var str8 = "Apple,Banana,Mango";
+            var res3 = str8.substr(6,6);
+            document.getElementById("demo8").innerHTML = res3;
 
+        </script>
+        <h2> 7.Replace method</h2>
+        <button onclick="myFunction()">Click here</button>
+        <p id= "demo9"> Please visit MICROSOFT Microsoft and Microsoft!</p>
+        <script>
+            function myFunction(){
+                var str9 = 
+                document.getElementById("demo9").innerHTML;
+                var txt2 =
+                str9.replace("Microsoft","W3School");
+                document.getElementById("demo9").innerHTML = txt2;
+            }
+        </script>
+        <h2>8. toUpperCase method toLowerCase method</h2>
+        <p id="demo10">Hello Silly Gorilla!</p>
+        <button onclick="yourFunction()">Click here to change into Captial letter</button>
+        <script>
+            function yourFunction(){
+                var text = document.getElementById("demo10").innerHTML;
+                document.getElementById("demo10").innerHTML = text.toUpperCase();
+                        }
+                                    </script>
+        <script>
+            function toLowerCase(){
+                var text2 = document.getElementById("demo10").innerHTML;
+                document.getElementById("demo10").innerHTML = text2.toLowerCase();
+            }
+        </script>
+        <button onclick="toLowerCase()">Click here toLowerCase</button>
+        <h2>9.concat method</h2>
+        <p>concat()connects 2 or more strings</p>
+        <p id="demo11"></p>
+        <script>
+            var text1 = "Hello";
+            var text2 = "World!";
+            var text3 = text1.concat(" ",text2);
+            document.getElementById("demo11").innerHTML = text3;
 
-    
+        </script>
+        <h2>10.String.trim()method</h2>
+        <button onclick="deLete()">CLick here to delete something</button>
+
+        <script>
+            function deLete(){
+                var str12 = "        Hello World!      ";
+                alert(str12.trim());
+            }
+        </script>
+        <h2>12.charAt() charCodeAt() methods</h2>
+        <p> charAt(postion)<br>
+        charCodeAt(postion)</p>
+        <p id = "demo13"></p>
+        <p id = "demo14"></p>
+        <script>
+            var str = "HELLO WORLD";
+            document.getElementById("demo13").innerHTML = str.charAt(0);
+            document.getElementById("demo14").innerHTML = str.charCodeAt(0);
+        </script>
+        <h2>13.property Access</h2>
+        <h2>14.split() method</h2>
+        <button onclick="Split()">click here to split</button>
+        <p id="demo15"></p>
+        <script>function Split(){
+            var str15 = "a,b,c,d,e,f";
+            var arr = str15.split(",");
+            document.getElementById("demo15").innerHTML = arr[0];
+        }
+        </script>
+        
     </body>
 </html>
