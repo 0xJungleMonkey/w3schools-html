@@ -8,6 +8,196 @@
             // var array-name = [item1,item2,item3......]
             document.getElementById("demo").innerHTML = cars;
         </script>
+        <p> Keyword new  (not necessary to use)</p>
+        <p id = "demo1"></p>
+        <script>
+            var car = new Array("Audi","BMW","porsche");
+            document.getElementById("demo1").innerHTML = car + "<br>" + 
+            car[0]+ car[2];
+        </script>
+        <p>Access array elements</p>
+        <p id = "demo2"></p>
+        <script> 
+        var person = {firstName:"Bill",lastName:"Gates", age: 62};
+        var cars = ["Audi","BMW","porsche"];
+        cars[0] = "Opel";
+        cars[3] = person;
+        
+        document.getElementById("demo2").innerHTML = "The type of array " + cars + "is "+ typeof cars + "<br>"+ person.firstName;     
+        </script>
+        <h1> The type of JS Array is Object. </h1>
+        <p> length property</p>
+        <p id = "demo3"></p>
+        <script>
+            var fruits = ["Banana","Orange","Apple","Mango"];
+            var last = fruits[fruits.length-1];
+            document.getElementById("demo3").innerHTML = fruits.length + "<br>" + 
+            last;
+        </script>
+        <h1> Traverse array elements</h1>
+        <p>1. for cycle</p>
+        <p id = "demo4"></p>
+        <script>
+            var fruits, text, flen, i;
+            fruits = ["Banana","Orange","Apple","Mango"];
+            fruits[6] = "Lemonnn";
+            flen = fruits.length;
+            text = "<ul>";
+                for (i = 0; i < flen; i++){
+                    text += "<li>" + fruits[i] + "</li>";
+                }
+                text +="</ul>";
+                document.getElementById("demo4").innerHTML = text;
+        </script>
+        <p>2. Array.foreach() </p>
+        <p id = "demo5"></p>
+        <script>
+            var fruits, text;
+            fruits = ["Banana","Orange","Apple","Mango"];
+            text = "<ul>";
+                fruits.foreach(myFunction);
+                text +="</ul>";
+                document.getElementById("demo5").innerHTML = text;
+
+                function myFunction(value){
+                    text += "<li>" + value +"</li>";
+                }
+        </script>
+        <p>Add array elements push()</p>
+        <button onclick="myFunction()">Click here </button>
+        <button onclick="lengthfun()">Click here to add "lemonn"</button>
+        <p id = "demo6"></p>
+        <p id = "demo7"></p>
+        <script>
+            var fruits = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo6").innerHTML = fruits;
+            document.getElementById("demo7").innerHTML = fruits;
+            function myFunction(){
+                fruits.push("Lemon");
+                document.getElementById("demo6").innerHTML = fruits;
+            }
+            function lengthfun(){
+                fruits[fruits.length] = "Lemonn";
+                document.getElementById("demo7").innerHTML = fruits;
+            }
+        </script>
+        <h1>associative arrays</h1>
+        <p id = "demo8"></p>
+        <script>
+            var person = [];
+            person[0]= "John";
+            person[1]= "Doe";
+            person[2]= 46;
+            document.getElementById("demo8").innerHTML = 
+            person[0] + " "+ person.length;
+        </script>
+        
+        <p id="demo9"></p>
+        <script>
+        var person = {};
+        person["firstName"] = "John";
+        person["lastName"] = "Doe";
+        person["age"] = 46; 
+        document.getElementById("demo9").innerHTML =
+        person.firstName + " " + person.length;
+        </script>
+        
+        <h2>JS Array Method</h2>
+        <h4>1. Array to String toString() or join()</h4>
+        <p id = "demo10"></p>
+        <script>
+            var fruits = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo10").innerHTML = 
+            fruits.toString() +"<br>"+ fruits.join(" * ");
+        </script>
+        <h4>2. Add new element or delete element</h4>
+        <p>popping and pushing</p>
+        <p id= "demo11"></p>
+        <p id= "demo12"></p>
+        <p id= "demo13"></p>
+        <p id= "demo14"></p>
+        <script>
+            var fruits = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo11").innerHTML = fruits;
+            var x = fruits.pop();
+            //fruits.pop() delete the last one element in the array
+            var y = fruits.push("Kiwi");
+            document.getElementById("demo12").innerHTML = fruits;
+            document.getElementById("demo13").innerHTML = x;
+            //fruits.pop() return the one which is popped from the array
+            document.getElementById("demo14").innerHTML = 
+            fruits.push("Lemon") + "<br>" + fruits;
+            //fruits.push() return the length of array
+       </script>
+       <h4>3. Shifting element </h4>
+       <p>shift() delete the 1st element in the array </p>
+       <p>unshift() add new element as the array[0]</p>
+       <p>shift() return the element that is deleted. <br>
+        unshift() return the length of array.
+       </p>
+       <h4>4. Change the element</h4>
+       <p> arrayName[indexNumber] = string or object or numbers <br>
+       arrayName[arrayName.length] = string or object or numbers</p>
+       <p id = "demo15"></p>
+       <p id = "demo16"></p>
+       <p id = "demo17"></p>
+       <script>
+           var fruits = ["Banana","Orange","Apple","Mango"];
+           document.getElementById("demo15").innerHTML = fruits;
+           p = fruits.shift();
+           q = fruits.unshift("Lemon");
+           fruits[fruits.length] = "Kiwi";
+           fruits[6] = "Litchi";
+           document.getElementById("demo16").innerHTML = fruits;
+           document.getElementById("demo17").innerHTML = 
+           p + " <br>" + q + "<br>" + fruits[0];
+       </script>
+       <h4>5. Splice array</h4>
+       <p> 5.1 Use splice() to add new elements <br>
+        ArrayName.splice(where to splice, how many elements 
+        to delete, other new elements) <br>
+        splice() return array which includes the deleted elements </p>
+        <p>5.2 Use splice() to delete elements <br>
+        </p>
+        <p id = "demo18"></p>
+        <p id = "demo19"></p>
+        <script>
+            var fruits = ["Banana","Orange","Apple","Mango"];
+            document.getElementById("demo18").innerHTML = 
+            "The original array:<br>" + fruits;
+            var xx = fruits.splice(2, 1, "Lemon","Watermelon");
+            document.getElementById("demo19").innerHTML = 
+            "The new array:" + fruits +"<br>" + 
+            "The deleted elements:" + xx;
+            var yy = fruits.splice(1,1);
+            document.getElementById("demo20").innerHTML =
+             "The new array: " +fruits + "<br>" + 
+             "The deleted elements:" + yy;
+        </script>
+        <h5>6.concat() </h5>
+        <p id = "demo20"></p>
+        <script>
+            var myGirls = ["Emma","Isabella"];
+            var myBoys = ["Jacob","Michael","Ethan"];
+            var myPets = ["Puppies","Cats"];
+            var myGirlss = myGirls.concat(["Cecilie","Lone"]);
+            var myChildren = myGirls.concat(myBoys,myPets);
+            document.getElementById("demo20").
+            innerHTML = myChildren + "<br>" + myGirlss;
+        </script>
+        
+        <script></script>
+
+
+
+    
+       
+
+
+
+
+
+
         
     </body>
 </html>
