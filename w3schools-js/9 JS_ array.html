@@ -271,15 +271,138 @@ function myFunction() {
 
 
 function displayCars() {
-  document.getElementById("demo").innerHTML =
+  document.getElementById("demo24").innerHTML =
   cars[0].type + " " + cars[0].year + "<br>" +
   cars[1].type + " " + cars[1].year + "<br>" +
   cars[2].type + " " + cars[2].year;
 }
 </script>
+<h2> Array iteration method</h2>
+<h4> Array.foreach()</h4>
+<p id = "demo25"> </p>
+<script>
+    var txt = "" ;
+    var numbers = [45,4,9,16,25];
+    number.foreach(myFunction);
+    document.getElementById("demo25").innerHTML = txt;
 
-        
+    function myFunction(value,index,array){
+        txt = txt +value +"<br>";
+    }
+</script>
+<h4> Array.map()</h4>
+<p id = "demo26"></p>
+<script>
+    var numbers1, numbers2;
+    numbers1 = [45,9,3,14,35];
+    numbers2 = numbers1.map(myFunction);
 
-        
+    document.getElementById("demo26").innerHTML = numbers2;
+    
+    function myFunction(value){
+        return value*2;
+    }
+</script>
+<h4>Array.filter()</h4>
+<p id = "demo27"></p>
+<script>
+    var numbers = [45,9,3,14,25];
+    var over18 = numbers.filter(myFunction);
+    document.getElementById("demo27").innerHTML = over18;
+
+    function myFunction(value,index,array){
+        return value > 18;
+    }
+</script>
+<h4>Array reduce()</h4>
+<p> reduce(total,value,index,array) </p>
+<p id = "demo28"></p>
+<script>
+    var numbers = [45,6,17,34,25];
+    var sum = numbers.reduce(myFunction,100);
+    // reduce(FunctionName,Initial value )
+    document.getElementById("demo28").
+    innerHTML = "The total is : " + sum;
+
+    function myFunction(total,value,index,array){
+        return total + value;
+    }
+
+</script>
+<h4>Array reduceRight()</h4>
+<p>reduceRight work from right to left</p>
+<p id = "demo29"></p>
+<script>
+    var numbers = [45,6,17,34,25];
+    var sum = numbers.reduceRight(myFunction,100);
+    // reduceRight(FunctionName,Initial value )
+    document.getElementById("demo29").
+    innerHTML = "The total is : " + sum;
+
+    function myFunction(total,value,index,array){
+        return total + value;
+    }
+</script>
+<h4>Array every()</h4>
+<p id = "demo30"></p>
+<script>
+    var numbers = [45,6,17,34,25];
+    var allOver18 = numbers.every(myFunction);
+    document.getElementById("demo30").
+    innerHTML = "If all the elements >18: "+ allOver18;
+    function myFunction(value,index, array){
+        return value > 18;
+    }
+    // check if all the value > 18
+    
+</script>
+<h4>Array some()</h4>
+<p> some() check if some elements pass the test</p>
+<p id = "demo31"></p>
+<script>
+    var numbers = [45,6,17,34,25];
+    var someOver18 = numbers.some(myFunction);
+    document.getElementById("demo31").innerHTML
+     = "Some elements >18: " + someOver18;
+    function myFunction(value,index,array){
+        return value > 18;
+    }
+</script>
+<h4> Array indexOf()</h4>
+<p> indexOf() search elements value and return the postion </p>
+<p id = "demo32"></p>
+<script>
+    var fruits = ["Apple","Orange","Apple","Mango"];
+    var a = fruits.indexOf("Apple",1);
+    //array.indexOf(item,start)
+    document.getElementById("demo32").
+    innerHTML = "Apple postion: " + (a +1);
+</script> 
+<h4>Array.lastIndexOf()</h4>
+<p> lastIndexOf() is similiar to indexof <br>
+    search from last to start </p>
+<p id = "demo33"></p>
+<h4>Array.find()</h4>
+<p>find() return the first element that pass the function test</p>
+<script>
+    var numbers = [45,6,17,34,25];
+    var first = numbers.find(myFunction);
+    document.getElementById("demo33").innerHTML =
+     "The first element which is bigger than 18: " + first;
+function myFunction(value,index,array){
+    return value > 18;
+}
+</script>
+<h4>Array.findIndex()</h4>
+<p>findIndex() return the index of first element which pass the test</p>
+<p id = "demo34"></p>
+<script>
+    var numbers = [45,6,17,34,25];
+    var first = numbers.findIndex(myFunction);
+    document.getElementById("demo34").innerHTML = "The first element which is bigger than 18: "+ first;
+    function myFunction(value,index,array){
+        return value > 18;
+    }
+</script>
     </body>
 </html>
