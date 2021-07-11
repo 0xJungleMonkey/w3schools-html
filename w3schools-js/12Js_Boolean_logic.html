@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Boolean() logic</h2>
+        <h4>Boolean() </h4>
+        <p> Boolean(10>9) True? False?         </p>
+        <h4>Comapare and conditions</h4>
+        <p>==  If(day == "Monday") <br>
+        variablename = (condition) ? value1:value2</p>
+        <p> Example 1: <br>
+        Write down your age then click "Enter" button:</p>
+        <input id = "age" value = "" />
+        <p id = "demo"></p>
+        <button onclick="ageConditions()">Enter</button>
+        <script>
+            document.getElementById("demo").innerHTML =
+             Boolean(10 > 9) + "<br>" + (10 > 9);
+            function ageConditions(){
+                var age, voteable;
+                age = Number(document.getElementById("age").value);
+                if (isNaN(age)){
+                    voteable = "Input is not number";
+                } else {
+                    voteable = ( age < 18 ) ? "children":"adults";
+                }
+                document.getElementById("demo").innerHTML = voteable;
+            }
+        </script>
+        <p>if (condition){<br>
+            XXXXXXX;<br>
+        } else if (condition2) {<br>
+            xxxxx;<br>
+        } else {<br>
+            XXXXXXX;<br>
+        }<br>
+        </p>
+        <p>单击按钮以显示基于时间的问候语：</p>
+
+        <button onclick="myFunction()">试一试</button>
+
+        <p id="demo2"></p>
+
+        <script>
+            function myFunction() {
+                var greeting;
+                var time = new Date().getHours();
+                if (time < 10) {
+                    greeting = "早安";
+                } else if (time < 20) {
+                    greeting = "日安";
+                } else {
+                    greeting = "晚安";
+                }
+                document.getElementById("demo2").innerHTML = greeting;
+            }
+        </script>
+        <h2> Js Switch </h2>
+        <p> switch(statement){ <br>
+                case n: <br>
+                    xxxxxxxx <br>
+                    break; <br>
+                case n: <br>
+                    xxxxxxxx <br>
+                    break; <br>
+                default: <br>
+                    default xxxxxxxx <br>
+            }
+        </p>
+        <p id="demo3"></p>
+        <script>
+            var day;
+            switch (new Date().getDay()) {
+              case 0:
+                day = "周日";
+                break;
+              case 1:
+              case 2:
+                day = "Monday and Tuesday";
+                break;
+              case 2:
+                day = "周二";
+                break;
+              case 3:
+                day = "周三";
+                break;
+              case 4:
+                day = "周四";
+                break;
+              case 5:
+                day = "周五";
+                break;
+              case  6:
+                day = "周六";
+              default:
+                day = "Waiting for weekends";
+            }
+            document.getElementById("demo3").innerHTML = "今天是" + day;
+        </script>
+    </body>
+</html>

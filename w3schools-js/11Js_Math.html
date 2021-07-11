@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Js Math Objects</h2>
+        <p>Math.round(x) returns rounded integer</p>
+        <p>Math.pow(x,y) returns The Y power of X</p>
+        <p>Math.sqrt(x) returns the square root of X</p>
+        <p>Math.abs(x) returns the absolute value of X </p>
+        <p>Math.ceil(x) returns a number's upward-rounded value</p>
+        <p>Math.floor(x) returns a number's round-down value</p>
+        <p>Math.sin(x) Math.cos(x) </p>
+        <p>Math.min(x,y,z,w,q) Math.max(x,w,e,r,t,q)</p>
+        <p>Math.random() return random numbers between 0 and 1 </p>
+        
+        <p id = "demo"></p>
+        <script>
+            function getRndInteger(min,max){
+                return Math.floor(Math.random()*(max - min)) + min;
+            }
+            document.getElementById("demo").innerHTML = 
+            Math.round(4.4) + "<br>" + Math.pow(4,4) +
+            "<br>" + Math.sqrt(8) +"<br>" + Math.abs(-4,7) + "<br>" +
+            Math.ceil(7.1) + "<br>"  + Math.floor(8.9) + "<br>" + 
+            "Euler's number: "  + Math.E + "<br>" + "PI: " + Math.PI + "<br>"
+            + Math.SQRT2  + "<br>" + Math.SQRT1_2  + "<br>" + Math.LN2 + "<br>" + 
+            Math.LN10  + "<br>" + Math.LOG2E + "<br>" + Math.LOG10E + "<br>" + 
+            Math.floor(Math.random() * 100) + "<br>" + getRndInteger(0,10);
+            //getRndInteger(min,max) return random number from 0 to 9(included)
+            //getRndInteger(min,max) return random number from 0 to 9(not included)
+            //return Math.floor(Math.random()*(max - min + 1))+ min;
+        
+        </script>
+    </body>
+</html>
