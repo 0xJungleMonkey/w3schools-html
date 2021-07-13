@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Regular Expression</h2>
+        <p> Grammar: /pattern/modifiers<br>
+        ex. var patt = /w3school/i;</p>
+        <h4> String method: search() replace()</h4>
+        <p> Search () </p>
+        <p> Replace () </p>
+        <p id = "demo"> </p>
+        <p id = "demo1"> </p>
+        <p id = "demo2"></p>
+        <script>
+            var str = "Visit W3School!";
+            var n = str.search("W3School");
+            var m = str.search(/w3school/i);
+            var o = str.replace("W3School", "Microsoft");
+            var p = str.replace(/W3School/i,"Microsoft");
+            document.getElementById("demo").innerHTML = n + "<br>" + m;
+            document.getElementById("demo1").innerHTML = o + "<br>" + p + "<br>" +
+            /e/.test("The best things in life are free!");
+            var obj = /e/.exec("The best things in life are free!");
+            document.getElementById("demo").innerHTML =
+            "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+        </script>
+
+    </body>
+</html>
