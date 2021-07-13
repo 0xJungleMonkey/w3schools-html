@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>
+            JS FOR cycle
+        </h2>
+        <p> for ( i = 0; i < cars.length; i++) {<br>
+            text += cars[i] + "<br>";
+        }</p>
+        <p id="demo1"></p>
+
+        <script>
+        var cars = ["BMW", "Volvo", "porsche", "Ford"];
+        var i, len, text;
+        for (i = 0, len = cars.length, text = ""; i < len; i++) {
+        text += cars[i] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text;
+        </script>
+        <p>带 break 的循环</p>
+        <p id="demo"></p>
+        <script>
+        var text = "";
+        var i;
+        for (i = 0; i < 10; i++) {
+          if (i === 3) { break; }
+          text += "数字是 " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script>
+
+        <p>这个循环在 i=3 时跳过这一步：</p>
+
+        <p id="demo"></p>
+
+        <script>
+        var text = "";
+        var i;
+        for (i = 0; i < 10; i++) {
+        if (i === 3) { continue; }
+        text += "数字是 " + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script>
+        <h2>JS Type conversion</h2>
+        <h4>Number()
+             String() 
+             Boolean()</h4>
+        <p> Type : string number boolean object function</p>
+        <p>Object Types: Object Date Array</p>
+        <p>null undefined</p>
+        <h4>typeof operator</h4>
+        <p>typeof 运算符返回变量、对象、函数或表达式的类型。</p>
+        <p id="demo"></p>
+
+    <script>
+    document.getElementById("demo").innerHTML = 
+    typeof "john" + "<br>" +
+    typeof 3.14 + "<br>" +
+    typeof NaN + "<br>" +
+    typeof false + "<br>" +
+    typeof [1,2,3,4] + "<br>" +
+    typeof {name:'john', age:34} + "<br>" +
+    typeof new Date() + "<br>" +
+    typeof function () {} + "<br>" +
+    typeof myCar + "<br>" +
+    typeof null;
+    /*
+    typeof is operator. return string.
+    NaN 的数据类型是数值
+    数组的数据类型是对象
+    日期的数据类型是对象
+    null 的数据类型是对象
+    未定义变量的数据类型是 undefined
+    尚未赋值的变量的数据类型也是 undefined */
+    </script>
+    <h4>constructor attribute</h4>
+    <p>constructor return variable's constructor function</p>
+    <p>constructor 属性返回变量或对象的构造器函数。</p>
+    <p id="demo"></p>
+    <script>
+    document.getElementById("demo").innerHTML = 
+    "john".constructor + "<br>" +
+    (3.14).constructor + "<br>" +
+    false.constructor + "<br>" +
+    [1,2,3,4].constructor + "<br>" +
+    {name:'john', age:34}.constructor + "<br>" +
+    new Date().constructor + "<br>" +
+    function () {}.constructor;
+    </script>
+    
+
+
+
+
+        <p>for/in 语句循环遍历对象的属性。</p>
+
+        <p id="demo2"></p>
+        
+        <script>
+        var txt = "";
+        var person = {fname:"Bill", lname:"Gates", age:62}; 
+        var x;
+        for (x in person) {
+          txt += person[x] + " ";
+        }
+        document.getElementById("demo2").innerHTML = txt;
+        </script>
+
+        <h4> While cycle </h4>
+        <p> while (condition){ <br>
+                xxxxxxxx<br>
+            }
+        </p>
+        <p id="demo3"></p>
+
+<script>
+var text = "";
+var i = 0;
+while (i < 10) {
+  text += "<br>数字是 " + i;
+  i++;
+}
+document.getElementById("demo3").innerHTML = text;
+</script>
+
+<h2>Do / While cycle</h2>
+<p>do {
+    要执行的代码块
+}
+while (条件);</p>
+<p id="demo"></p>
+
+<script>
+var text = ""
+var i = 0;
+do {
+  text += "<br>数字是 " + i;
+  i++;
+}
+while (i < 10);  
+document.getElementById("demo").innerHTML = text;
+</script>
+    </body>
+</html>
