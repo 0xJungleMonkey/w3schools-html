@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>
+            JS Error Throw or Try to Catch
+        </h2>
+        <p id="demo"></p>
+
+        <script>
+        try {
+        adddlert("欢迎您，亲爱的用户！");
+        }
+        catch(err) {
+            //write down the error
+        document.getElementById("demo").innerHTML = err.message;
+        }
+        </script>
+        <h4>try and catch</h4>
+        <p>try {
+            供测试的代码块
+       }
+        catch(err) {
+            处理错误的代码块
+       } </p>
+       <p>请输入 5 到 10 之间的数字：</p>
+
+        <input id="demo1" type="text">
+        <button type="button" onclick="myFunction()">检测输入</button>
+        <p id="p01"></p>
+
+        <script>
+        function myFunction() {
+        var message, x;
+        message = document.getElementById("p01");
+        message.innerHTML = "";
+        x = document.getElementById("demo1").value;
+        try { 
+        if(x == "")  throw "是空的";
+        if(isNaN(x)) throw "不是数字";
+        x = Number(x);
+        if(x < 5)  throw "太小";
+        if(x > 10)   throw "太大";
+        }
+        catch(err) {
+            message.innerHTML = "输入：" + err;
+        }
+        }
+        </script>
+
+        <h2>HTML validation</h2>
+        <h4>finally</h4>
+        <p>try {
+            供测试的代码块
+       }
+        catch(err) {
+            处理错误的代码块
+       } 
+       finally {
+            无论 try / catch 结果如何都执行的代码块
+       }</p>
+       <p>请输入 5 到 10 之间的数字：</p>
+​
+        <input id="demo3" type="text1">
+        <button type="button" onclick="myFunction()">检测输入</button>
+        <p id="p02"></p>
+
+        <script>
+        function myFunction() {
+        var message, x;
+        message = document.getElementById("p02");
+        message.innerHTML = "";
+        x = document.getElementById("demo3").value;
+        try { 
+            if(x == "")  throw "是空的";
+            if(isNaN(x)) throw "不是数字";
+            x = Number(x);
+            if(x > 10)   throw "太大";
+            if(x < 5)  throw "太小";
+        }
+        catch(err) {
+            message.innerHTML = "输入：" + err;
+        }
+        finally {
+            document.getElementById("demo3").value = "";
+        }
+        }
+        </script>
+        <h4>error name message</h4>
+        <p>Error Name Values :EvalError(NOT USED ANYMORE) <br>
+        RangeError ReferenceError SyntaxError TypeError UNIError</p>
+        <p> RangeError</p>
+        <p id="demo4">
+        <script>
+            var num = 1;
+            try {
+              num.toPrecision(500);
+            }
+            catch(err) {
+              document.getElementById("demo4").innerHTML = err.name;
+            }
+        </script>
+        <p>ReferenceError</p>
+        <p id="demo5"></p>
+
+        <script>
+        var x;
+        try {
+        x = y + 1;
+        }
+        catch(err) {
+        document.getElementById("demo5").innerHTML = err.name;
+        }
+        </script>
+        <p>SyntaxError</p>
+        <p id= "demo6"></p>
+        <script>
+            try{
+                eval("alert('HEllo)");
+            }
+            catch(err){
+                document.getElementById("demo6").innerHTML = err.name;
+            }
+        </script>
+        <p>您无法将数字转换为大写：</p>
+
+        <p id="demo7"></p>
+        
+        <script>
+        var num = 1;
+        try {
+          num.toUpperCase();
+        }
+        catch(err) {
+          document.getElementById("demo7").innerHTML = err.name;
+        }
+        </script>
+
+        <p>使用 decodeURI() 无法解码某些字符：</p>
+
+        <p id="demo8"></p>
+
+        <script>
+        try {
+        decodeURI("%%%");
+        }
+        catch(err) {
+        document.getElementById("demo8").innerHTML = err.name;
+        }
+        </script>
+        
+
+
+
+    </body>
+</html>
