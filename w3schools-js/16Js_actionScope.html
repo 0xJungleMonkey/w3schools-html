@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>JavaScript action scope</h2>
+    <p>myFunction() 之外的 carName 未定义。</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+    carName1 = "BMW";
+    //global scope carName1 
+    //Do not set global scope generally
+    myFunction();
+    function myFunction() {
+    var carName = "porsche";
+    //local scope carName
+    carName2 = "Audi";
+    //Undeclared variable automatically global variable
+    document.getElementById("demo1").innerHTML =
+    typeof carName + " " + carName;
+    }
+    //Local scope can not be accessd outside of function
+    document.getElementById("demo2").innerHTML =
+    typeof carName + "<br>" +  typeof carName1 + " " + carName1;
+    </script>
+    <h2>JavaScript Use Strict</h2>
+    <h4>Use Strict : define JS code should be done by Strict</h4>
+    <p> Use Strict global action scope</p>
+    <script>
+        "use strict";
+        //Declare strict mode globally
+        myFunction();
+        
+        function myFunction() {
+          y = 3.14;   // 会引发错误（y 未定义）
+        }
+        </script>
+    <p> Use strict local action scope</p>
+    
+
+
+
+</body> 
+
+</html>
