@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//form value cannot be empty
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("必须填写姓名！");
+    return false;
+  }
+}
+</script>
+<form name="myForm" action="/demo/html/action_page.php" onsubmit="return validateForm()" method="post">
+  Name：<input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+<h2>JavaScript 能够验证输入</h2>
+<p>请输入 1 与 10 之间的数：</p>
+<input id="numb">
+<button type="button" onclick="myFunction()">提交</button>
+<p id="demo"></p>
+<script>
+function myFunction() {
+  var x, text;
+  // 获取 id="numb" 的输入字段的值
+  x = document.getElementById("numb").value;
+
+  // 如果 x 不是数字或小于 1 或大于 10
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "输入无效";
+  } else {
+    text = "输入有效";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+<!-- required antomatic form validation-->
+<form action="/demo/action_page.php" method="post">
+    <input type="text" name="fname" required>
+    <input type="submit" value="提交">
+  </form>
+  
+  <p>Because of the "required", 如果单击“提交”，而不填写文本字段，您的浏览器将显示错误消息。</p>
+<h2>JS validation API</h2>
+<h4>Constraint validation</h4>
+<h5>constraint validation DOM <br>
+checkValidity()  return true, if input element includes valid data <br>
+setCustomValidity()  set input element validationMessage attribute</h5>
+<p> checkValidity() method</p>
+<p> input numbers, click to submit it </p>
+<input id = "id1" 
+<button onclick="myFunction()">Submit</button>
+<p> if the number is smaller than 100 or bigger than 300, remind error</p>
+<p id = "demo2"></p>
+<script>
+    function myFunction(){
+        var inpObj = document.getElementById("demo2");
+        if(!inpObj.checkValidity()){
+            document.getElementById("demo2").innerHTML = inpObj.validationMessage;
+            }else{
+                document.getElementById("demo2").innerHTML = "It is valid";
+            }
+    }
+</script>
+</body>
+</html>
