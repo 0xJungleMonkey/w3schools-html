@@ -50,19 +50,49 @@ checkValidity()  return true, if input element includes valid data <br>
 setCustomValidity()  set input element validationMessage attribute</h5>
 <p> checkValidity() method</p>
 <p> input numbers, click to submit it </p>
-<input id = "id1" 
-<button onclick="myFunction()">Submit</button>
+<input id = "id1" type = "number" min = "100" max = "300" required>
+<button onclick = "myFunction1()">Submit</button>
+
 <p> if the number is smaller than 100 or bigger than 300, remind error</p>
 <p id = "demo2"></p>
 <script>
-    function myFunction(){
-        var inpObj = document.getElementById("demo2");
-        if(!inpObj.checkValidity()){
+    function myFunction1(){
+        var inpObj = document.getElementById("id1");
+        if(!inpObj.checkValidity()){ 
             document.getElementById("demo2").innerHTML = inpObj.validationMessage;
             }else{
-                document.getElementById("demo2").innerHTML = "It is valid";
+                document.getElementById("demo2").innerHTML =  inpObj.willValidate + "<br>" + 
+                "It is valid";
             }
     }
+  
+</script>
+<h4>validity property</h4>
+<p>rangeOverflow if input value is bigger than MAX <br>
+rangeUnderflow if input value is smaller than MIN <br>
+</p>
+<p>输入数字并点击提交：</p>
+
+<input id="id2" type="number" min="10" max="100">
+
+<button onclick="myFunction2()">提交</button>
+
+<p>如果数字大于 100（输入的 max 属性），将显示错误消息。</p>
+
+<p id="demo3"></p>
+
+<script>
+function myFunction2() {
+  var txt = "";
+  if (document.getElementById("id2").validity.rangeOverflow) {
+    txt = "值太大";
+  } else if (document.getElementById("id2").validity.rangeUnderflow) {
+    txt = "The value is too small.";
+  } else {
+    txt = "输入有效";
+  }    
+  document.getElementById("demo3").innerHTML = txt;
+}
 </script>
 </body>
 </html>
