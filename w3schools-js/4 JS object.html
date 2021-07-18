@@ -20,7 +20,102 @@
                 return this.firstName + " " + this.lastName;
             }
         };
-
-        document.getElementById("demo").innerHTML = person.fullName() + person["id"];
+        // Create a new property by this way :
+        person.nationality = "English";
+        document.getElementById("demo").innerHTML = person.fullName() + person["id"] + person["nationality"];
     </script>
+    <h2>JS object defination</h2>
+    <h3>What is object?  Anything except the original value</h3>
+    <p>They are not objects: string number boolean null undefined</p>
+    <h3>Object is the variable which inclues variables</h3>
+    <p>object can include many values. <br>
+    {Name:Value,Name2:Value2,Name3,Value3...}</p>
+    
+    <h3>Object is changable </h3>
+    <p id = "demo1"></p>
+    <script>
+        //create object person,person.age = 62
+        var person = {firstName:"Bill",lastName:"Gates",age:62,eyeColor:"blue"}
+        // x = person  will not create another object.
+        //Same objects but 2 names
+        var x = person;
+        //When we change one of it 
+        x.age = 10
+        //Another one changed as well
+        document.getElementById("demo1").innerHTML = person.age
+    </script>
+    <h3>Object property </h3>
+    <p>delete objectName.property </p>
+    <p>objectName.property<br>
+    objectName["property"] <br>
+    objectName[expression]    x = "age" person[x]</p>
+    <h3>Object methods</h3>
+    <p>Create a objectMethod : methodName:function(){} <br>
+    visit objectMethod: objectName.methodName()</p>
+    <h3> JS Object accessor Getter Setter</h3>
+    <h4>
+        JS Getter (get keyward)
+    </h4>
+    <p>Getter 和 Setter 允许您通过方法获取和设置属性。</p>
+
+<p>此示例使用 lang 属性来获取语言属性的值。</p>
+
+<p id="demo3"></p>
+
+<script>
+var person = {
+  firstName: "Bill",
+  lastName : "Gates",
+  language : "en",
+  get lang() {
+    return this.language;
+  }
+};
+// 使用 getter 显示来自对象的数据：
+document.getElementById("demo3").innerHTML = person.lang;
+</script>
+<h4>JS Setter</h4>
+<p id="demo4"></p>
+
+<script>
+// Create an object:
+var person = {
+  firstName: "Bill",
+  lastName : "Gates",
+  language : "en",
+  set lang(value) {
+    this.language = value;
+  }
+};
+// 使用 set 设置属性：
+person.lang = "zh";
+// 显示对象的数据：
+document.getElementById("demo4").innerHTML = person.language;
+</script>
+<h3>JS Object Constructor</h3>
+<p id="demo5"></p>
+
+<script>
+// Person 对象的构造器函数
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// 创建 Person 对象
+var myFriend = new Person("Bill", "Gates", 62, "blue");
+
+// 显示年龄
+document.getElementById("demo5").innerHTML =
+"My friend is " + myFriend.age + "."; 
+</script>
+
+
+
+</body>
 </html>
+
+
+
