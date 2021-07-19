@@ -26,7 +26,217 @@
             return(5/9)*(fahrenheit-32);
         }
         </script>
+        <h3>Function expression</h3>
+        <p>var x = function(p1,p2){return a*b}</p>
+        <p>函数can store variable , 存储在变量后，变量可以用作函数：</p>
+<p id="demo"></p>
 
+<script>
+var x = function (a, b) {return a * b};
+document.getElementById("demo").innerHTML = x(4, 3);
+</script>
+<h3> Call itself function</h3>
+<p>可以在不调用的情况下自动调用函数：</p>
 
-    </body>
+<p id="demo1"></p>
+
+<script>
+(function () {
+  document.getElementById("demo1").innerHTML = "Hello! I called myself";
+})();
+</script>
+
+<h3>Function property: functionName.length return the numbers of parameters called </h3>
+   
+<p>arguments.length 属性返回函数接收的参数数量：</p>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction(a, b) {
+  return arguments.length;
+}
+document.getElementById("demo2").innerHTML = myFunction(4, 3);
+</script>
+<h3>Function method : toString() return function by string</h3>
+<p>toString() 方法将函数作为字符串返回：</p>
+<p id="demo3"></p>
+<script>
+function myFunction(a, b) {
+  return a * b;
+}
+document.getElementById("demo3").innerHTML = myFunction.toString();
+</script>
+<h1>将默认值设置为函数参数</h1>
+
+<p id="demo4"></p>
+
+<script>
+function myFunction(x, y) {
+  if (y === undefined) {
+    y = 0;
+  }  
+  return x * y;
+}
+document.getElementById("demo4").innerHTML = myFunction(4);
+</script>
+<h3>Arguments object</h3>
+<h4>找到最大的数字</h4>
+
+<p id="demo5"></p>
+
+<script>
+function findMax() {
+  var i;
+  var max = -Infinity;
+  for(i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+} 
+document.getElementById("demo5").innerHTML = findMax(4, 5, 6);
+</script>
+
+<p id="demo6"></p>
+<h4>所有参数的总和：</h4>
+
+<script>
+function sumAll() {
+  var i;
+  var sum = 0;
+  for(i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+document.getElementById("demo6").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+</script>
+<h3> 3 ways to call function</h3>
+<p> call function in function way <br>
+call function in object method
+<br>
+call function in constructor method</p>
+<h3>JS function CALL() method</h3>
+<p>此例调用 person 的 fullName 方法，在 person1 上使用它：</p>
+<p id="demo7"></p>
+
+<script>
+var person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+var person1 = {
+  firstName:"Bill",
+  lastName: "Gates"
+}
+var person2 = {
+  firstName:"Steve",
+  lastName: "Jobs"
+}
+var x = person.fullName.call(person1); 
+document.getElementById("demo7").innerHTML = x; 
+</script>
+
+<p>Call method with parameters</p>
+
+<p>此例调用 person 的 fullName 方法，在 person1 上使用它：</p>
+
+<p id="demo8"></p>
+
+<script>
+var person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+var person1 = {
+  firstName:"Bill",
+  lastName: "Gates"
+}
+var person2 = {
+  firstName:"Steve",
+  lastName: "Jobs"
+}
+var x = person.fullName.call(person1, "Seatle", "USA"); 
+document.getElementById("demo8").innerHTML = x; 
+</script>
+<p>JavaScript 函数 Apply</p>
+<p>call() 和 apply() 之间的区别
+  不同之处是：
+  
+  call() 方法分别接受参数。
+  
+  apply() 方法接受数组形式的参数。
+  
+  如果要使用数组而不是参数列表，则 apply() 方法非常方便。</p>
+  <p>在此示例中，person 的 fulllName 方法在 person1 上<b>应用</b>：</p>
+
+  <p id="demo9"></p>
+  
+  <script>
+  var person = {
+    fullName: function(city, country) {
+      return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+  }
+  var person1 = {
+    firstName:"Bill",
+    lastName: "Gates"
+  }
+  var x = person.fullName.apply(person1, ["Seatle", "USA"]); 
+  document.getElementById("demo9").innerHTML = x; 
+  </script>
+  <h3>JavaScript Math.max()</h3>
+
+  <p>此例返回数字参数列表中的最大数字：</p>
+  
+  <p id="demo10"></p>
+  
+  <script>
+  document.getElementById("demo10").innerHTML = Math.max(1,2,3); 
+  </script>
+  <p>此例返回数字数组中的最大数：</p>
+
+  <p id="demo11"></p>
+  
+  <script>
+  document.getElementById("demo11").innerHTML = Math.max.apply(null, [1,2,3]); 
+  </script>
+  <h1>JavaScript 函数闭包</h1>
+
+  <p>function (functioon1())()使用局部变量计数。</p>
+  
+  <p id="demo12">0</p>
+  
+  <script>
+  document.getElementById("demo12").innerHTML = add();
+  function add() {
+    var counter = 0;
+    function plus() {counter += 1;}
+    plus();  
+    return counter; 
+  }
+  </script>
+  <h1>JavaScript 闭包</h1>
+
+  <p>closeure counter 使用局部变量计数。</p>
+  
+  <button type="button" onclick="myFunction()">计数！</button>
+  
+  <p id="demo">0</p>
+  
+  <script>
+  var add = (function () {
+    var counter = 0;
+    return function () {counter += 1; return counter;}
+  })();
+  
+  function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+  }
+  </script>
+</body>
 </html>
