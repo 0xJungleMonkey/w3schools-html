@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Html.Dom</h1>
+        <h2>Html Dom Element </h2>
+        <p>How to search and visit HTML ELEMENT in HTML Webpage</p>
+        <h3>Search HTML element</h3>
+        <h4>1.ID</h4>
+        <p id = "demo1"></p>
+        <script>
+            document.getElementById("demo1").innerHTML = "I  love my gorilla."
+        </script>
+        <h4> 2. tagName </h4>
+        <p>Hello, gorilla</p>
+        <p id = "demo2"></p>
+        <script>
+            var x = document.getElementsByTagName("p");
+            document.getElementById("demo2").innerHTML = 
+            "The First paragragh (index 0 ) is :  " + x[0].innerHTML;
+
+        </script>
+        <div id = "main">
+            <p> Dom is usful</p>
+            <p>You can use ID and tagName together.</p>
+        </div>
+        <p id = "demo3"></p>
+        <script>
+        
+
+             var z = document.getElementByID("main");
+             document.getElementById("demo3").innerHTML = "x";
+             //x.getElementsByTagName("p")[0].innerHTML;
+          //var y = x.getElementsByTagName("p");
+           // document.getElementById("demo3").innerHTML = y[0].innerHTML;
+          //  "The first paragragh of 'Main' is: " + y[0].innerHTML; 
+        </script>
+        
+    </body>
+</html>
