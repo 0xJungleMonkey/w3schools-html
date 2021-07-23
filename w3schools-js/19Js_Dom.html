@@ -19,21 +19,119 @@
             "The First paragragh (index 0 ) is :  " + x[0].innerHTML;
 
         </script>
-        <div id = "main">
-            <p> Dom is usful</p>
-            <p>You can use ID and tagName together.</p>
-        </div>
-        <p id = "demo3"></p>
-        <script>
-        
+       
+       <div id="main">
+           <p>Dom is usful</p>
+           <p>You can use ID and tagName together.</p>
+       </div>
+       <p id="demo"></p>
+       <script>
+           var x = document.getElementById("main");
+           var y = x.getElementsByTagName("p");
+           document.getElementById("demo").innerHTML = 
+           y[0].innerHTML;
+       </script>
+       <h4>3. ClassName</h4>
+       <p>Hello word</p>
+       <p class = "intro">Dom is usful!</p>
+       <p class = "intro">The case show getElementsByclassName</p>
+       <p id = "demo3"></p>
+       <script>
+           var x = document.getElementsByClassName("intro");
+           document.getElementById("demo3").innerHTML = 
+           x[0].innerHTML;
+       </script>
+       <h4>4. querySelectorAll</h4>
+       <p> Hello word</p>
+       <p class = "intro">Dom is usful</p>
+       <p class = "intro">The case show querySelectorAll</p>
+       <p id = "demo4"> </p>
+       <script>
+           var x = document.querySelectorAll("p.intro");
+           document.getElementById("demo4").innerHTML = 
+           'The first paragragh whose class = "intro": ' + x[0].innerHTML;
+       </script>
+       <h4>5. document.forms</h4>
+       <form id = "frm1" action = "/demo5/action_Page.php">First name:<input type = "text" name = "fname" value = "Bill"> <br>
+    Last name :<input type = "text" name = "lname" value = "gates"><br>
+<input type = "submit" value = "Submit"></form>
+<p>Click the "have a try" button to show the value of form</p>
+<button onclick = "myFunction()">have a try!</button>
+<p id= "demo5"></p>
+<script>
+    function myFunction(){
+        var x = document.forms["frm1"];
+        var text = "";
+        var i ;
+        for (i = 0; i < x.length; i++){
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo5").innerHTML = text;
+    }
+</script>
+<h3>HTML Dom change CSS</h3>
+<h4>1. change html style</h4>
+<p><b>Grammar:document.getElementById("id").style.property = new style </b> </p>
+<p id = "p1">Hello World!</p>
+<p id = "p2">Hello World</p>
+<script>
+    document.getElementById("p2").style.color = "blue";
+    document.getElementById("p2").style.fontFamily = "Arial";
+    document.getElementById("p2").style.fontSize = "larger";
+</script>
+<p> The second paragragh style has been changed</p>
+<h4>2. use events</h4>
+<p>browser will make an events:<br>
+    click elements;<br>
+    page loading;<br>
+    input is changed;<br>
+</p>
+<h3 id="id1">My title</h3>
+<button type = "button" onclick = "document.getElementById('id1').
+style.color = 'red'">Click here</button>
 
-             var z = document.getElementByID("main");
-             document.getElementById("demo3").innerHTML = "x";
-             //x.getElementsByTagName("p")[0].innerHTML;
-          //var y = x.getElementsByTagName("p");
-           // document.getElementById("demo3").innerHTML = y[0].innerHTML;
-          //  "The first paragragh of 'Main' is: " + y[0].innerHTML; 
-        </script>
+<h2> HTML Dom Animation</h2>
+<h3> 1. Create animate container<br>
+2. Add style <br>
+3. Animation code</h3>
+<!--Set style -->
+<style>
+    #container {
+        width: 400px;
+        height: 350px;
+        position:relative;
+        background:yellowgreen;
+    }
+    #animate {
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+        
+    }
+</style>
+<p> <button onclick = "myMove()">Click here to start animation</button></p>
+<!--Create a container-->
+<div id = "container">
+    <div id = "animate"><br><b>I love gorilla!</b></div>
+</div>
+<script>
+function myMove(){
+    var elem = document.getElementById("animate");
+    var pos = 0 ;
+    var id = setInterval(frame,5);
+    function frame(){
+        if (pos == 300){
+            clearInterval(id);
+        }else{
+            pos++;
+            elem.style.top = pos +"px";
+            elem.style.left = pos + "px";
+        }
+    }
+}
+</script>
+  <p><br><br></p>     
         
     </body>
 </html>
