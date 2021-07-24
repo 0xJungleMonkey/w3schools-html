@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <body onload="checkCookies()">
+    <h3> 2. onload onunload events</h3>
+    <p >When user come in webpage or leave the webpage, onload onunload events work<br>
+    onload event can be used to test user's browser type version, and load the right webpage version <br>
+onload and onunload event can be  used to handle cookie</p>
+        <p id ="demo"></p>
+    
+    <script>
+        function checkCookies(){
+            var text = "";
+            if (navigator.cookieEnabled == true){
+                text = "Cookie enabled";            
+            } else {
+                text = "Cookie unenabled";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        
+    </script>
+    <h3>3. onchange event</h3>
+    <p> when user change input content, call the upperCase()</p>
+    <script>
+        function myfunction(){
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+            }
+    </script>
+    Please input your name:<input type = "text" id ="fname" onchange=" myfunction()">
+    <p>
+        When you finish input,call the toUpperCase function.
+    </p>
+    <h3>4. onmouseover and onmouseout event</h3>
+    <p>onmouseover and onmouseout event can be used to call function when user move to Html </p>
+    <div onmouseover="mOver(this)"
+    onmouseout="mOut(this)"
+    style = "background-color: rgb(130, 57, 182);width:120px;height:
+     20px;padding: 40px;">
+     Please move mouse over here</div>
+     <script>
+         function mOver(obj){
+             obj.innerHTML = "Thank you"
+         }
+         function mOut(obj){
+             obj.innerHTML = "Please move the mouse over here"
+         }
+     </script>
+    <h2>Html Dom Event Listener</h2>
+    <p>1. addEventListener()</p>
+    <p> Grammar: element.addEventListener(event,function,useCapture)</p>
+    <button id= "myBtn1">Have a try!</button>
+    <p id = "demo8"></p>
+    <script>
+        document.getElementById("myBtn1").addEventListener("click",displayDate2);
+        function displayDate2(){
+            document.getElementById("demo8").innerHTML = Date();
+        }
+    </script>
+    <h3>2. add many events to one element</h3>
+    <p>Grammar: element.addEventListener("click",muFunction);<br>
+    element.addEventListener("click",mySecondFunction)</p>
+    <button id = "myBtn2">Have a try!</button>
+    <p id = "demo9"></p>
+    <script>
+        var x = document.getElementById("myBtn2");
+        x.addEventListener("mouseover",myFunction);
+        x.addEventListener("click",mySecondFunction);
+        x.addEventListener("mouseout",myThridFuncction);
+        function myFunction(){
+            document.getElementById("demo9").innerHTML += 
+            "Moused over!<br>";
+        }
+        function mySecondFunction(){
+            document.getElementById("demo9").innerHTML +="Clicked<br>";
+
+        }
+        function myThridFuncction(){
+            document.getElementById("demo9").innerHTML +="Moused out!<br>"
+        }
+    </script>
+    <h3>3. addEventListener to Windows object</h3>
+    <p id = "demo10"></p>
+    <script>
+        window.addEventListener("resize",function(){
+            document.getElementById("demo10").innerHTML = Math.random();
+        });
+    </script>
+    <h3>4. Transfer parameters</h3>
+    <button id = "myBtn3">Have a try!</button>
+    <p id = "demo11"></p>
+    <script>
+        var p1 = 5;
+        var p2 = 7;
+        document.getElementById("myBtn3").addEventListener("click", function(){
+            myFunction(p1,p2);
+        });
+        function myFunction(a,b){
+            var result = a * b ;
+            document.getElementById("demo11").innerHTML = result;
+        }
+    </script>
+    <style>
+        #myDiv1,#myDiv2{
+            background-color: coral;
+            padding:50 px;
+        }
+
+        #myP1, #myP2{
+            background-color: white;
+            font-size: 20px;
+            border: 1 px solid;
+            padding: 20px;
+        }
+        
+    </style>
+    <meta content="text/html; charset=utf-8"http-equiv="Content-type">
+    <div id = "myDiv1">
+        <h2>Budding:</h2>
+        <p id = "myP1">MEOW MEOW MEOW MEOW MEOW</p>
+    </div>
+    <div id = "myDiv2">
+        <h2>Capuring:</h2>
+        <p id = "myP2">MEOW MEOW meow MEOW MEOW</p>
+    </div>
+    <script>
+        //addEventListen(event,function,useCapture)
+        //useCapture  false from outside to inside ; 
+        document.getElementById("myP1").addEventListener("click",function(){
+            alert("Meow");
+        },false);
+        document.getElementById("myDiv1").addEventListener("click",function(){
+            alert("Meow Meow");
+        },false);
+        //true from inside to out side 
+        document.getElementById("myP2").addEventListener("click",function(){
+            alert("Meow Meow Meow");
+        },true);
+        document.getElementById("myDiv2").addEventListener("click",function(){
+            alert("Meow Meow Meow Meow");
+        },true);
+    </script>
+    <h3> removeEventListener()</h3>
+    <p> removeEventListener function remove the addEventListener</p>
+    <style>
+        #myDIV{
+            background-color: teal;
+            border:1px solid;
+            padding:50px;
+            color: wheat;
+            font-size:20px;
+        }
+    </style>
+    <div id = "myDIV">
+        <p>The div has a onmousemove event, it will display a random number when you move mouse here</p>
+        <button onclick="removeHandler()" id = "myBtn3">Delete</button>
+    </div>
+    <p id ="demo12"></p>
+    <script>
+        document.getElementById("myDIV").addEventListener("mousemove",myFunction);
+        function myFunction(){
+            document.getElementById("demo12").innerHTML = Math.random();
+        }
+        function removeHandler(){
+            document.getElementById("myDIV").removeEventListener("mousemove",myFunction);
+            }
+    </script>
+</body>
+</html>
