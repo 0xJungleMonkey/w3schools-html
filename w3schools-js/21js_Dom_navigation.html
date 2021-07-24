@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>1. HTML DOM Navigation  </h2>
+        <h3>1.1 Navigation from nodes</h3>
+        <ul>
+            <li>parentNode</li>
+            <li>childNodes[nodenumber]</li>
+                <li>firstChild  </li>
+                    <li>lastChild</li>
+                        <li>nextSibling</li>
+                        <li>previousSibling</li>
+</ul>
+<h4 id = "id02"> The first sample in this webpage</h4>
+<p id = "id01"></p>
+<p id = "id03"></p>
+<p id = "id04"></p>
+<script>
+    //1. get the value then write down the value 
+    document.getElementById("id01").innerHTML = 
+    document.getElementById("id02").innerHTML;
+    //2. same as firstChild.nodeValue
+    //nodeValue define node value 
+    //element node:
+    document.getElementById("id03").innerHTML = 
+    document.getElementById("id02").innerHTML ;
+    //3. same as childNodes[0].nodeValue
+    document.getElementById("id04").innerHTML = 
+    document.getElementById("id02").innerHTML;
+</script>
+<h3 id = "id05">1.2 nodeName </h3>
+<p> nodeName define the name of node <br>
+element node : tagName <br>
+attribute node: attributeName <br>
+text node : #text <br>
+document node: #document</p>
+<p id = "id06"></p>
+<script>
+document.getElementById("id06").innerHTML
+ = document.getElementById("id05").nodeName;
+</script>
+<h3 id= "id07">1.3. nodeType </h3>
+<p> ELEMENT_NODE 1 
+    ATTRIBUTE_NODE 2
+    TEXT_NODE 3
+    COMMENT_NODE 8 
+    DOCUMENT_NODE 9
+    DOCUMENT_TYPE_NODE 10 
+</p>
+<p id = "id08"></p>
+<script>
+    document.getElementById("id08").innerHTML = 
+    document.getElementById("id07").nodeType;
+</script>
+</body>
+</html>
