@@ -131,7 +131,29 @@ function myMove(){
     }
 }
 </script>
-  <p><br><br></p>     
+<h2> HTML Dom event</h2>
+<h3>1.Feedback to events (onclick = JS)</h3>
+<p onclick = "this.innerHTML='Thank you!'">hello</p>
+<h3>2. Events attributes</h3>
+<button onclick = "displayDate()">The date is : </button>
+<script>
+    function displayDate(){
+        document.getElementById("demo6").innerHTML = 
+        Date();
+    }
+</script>
+<p id = "demo6"></p>
+<h3>3. Dom assigns events</h3>
+<button id = "myBtn">Have a try</button>
+<p id = "demo7"></p>
+<script>
+    document.getElementById("myBtn").onclick = displayDat;
+    function displayDat(){
+document.getElementById("demo7").innerHTML = Date();
+    }
+</script>
+
+<p><br><br></p>     
         
     </body>
 </html>
