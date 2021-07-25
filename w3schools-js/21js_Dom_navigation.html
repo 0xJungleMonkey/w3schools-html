@@ -52,5 +52,92 @@ document.getElementById("id06").innerHTML
     document.getElementById("id08").innerHTML = 
     document.getElementById("id07").nodeType;
 </script>
+
+<h2> 2. HTML DOM Element (Node)</h2>
+<h3>2.1 Add and delete node(html element)</h3>
+<h4>2.1.1 create new elements---- appendChild()</h4>
+<p> create the element (element node) add it to parent node.</p>
+<div id = "div1">
+    <p id = "p1" >This is a paragragh</p>
+    <p id = "p2">This is 2nd paragragh</p>
+
+</div>
+<script>
+    //create a new element node 
+    var para = document.createElement("p");
+    //create its childnode (text node)
+    var node = document.createTextNode("This is new paragragh");
+    // set para as node's parent node
+    para.appendChild(node);
+    var element = document.getElementById("div1");
+    //set elemet as para's parent node
+    element.appendChild(para)
+   
+</script>
+<h4>2.1.2 create new elements---- insertBefore()</h4>
+<div id = "div2">
+    <p id = "p1">This is a text para</p>
+    <p id = "p2">This is another text para</p>
+</div>
+<script>
+    var para = document.createElement("p");
+    var node = document.createTextNode("This is the new text");
+    para.appendChild(node);
+    var element = document.getElementById("div2");
+    var child = element.firstChild;
+    element.insertBefore(para,child)
+</script>
+<h3> Delete HTML elements</h3>
+<div id ="div3">
+    <p id = "p3">This is a text para</p>
+    <p id = "p4"> This is another text para</p>
+</div>
+<script>
+    var parent = document.getElementById("div3");
+    var child = document.getElementById("p3");
+    
+    //1. remove child from parent node
+    parent.removeChild(child);
+    
+    var child2 = document.getElementById("p4");
+    //2. get parentNode 
+    child2.parentNode.removeChild(child2);
+</script>
+<h3>Replace Html element</h3>
+<div id = "div4">
+    <p id = "p5">This is a text para</p>
+    <p id = "p6"> This is another text para</p>
+</div>
+<script>
+    var parent = document.getElementById("div4");
+    var child = document.getElementById("p5");
+    var pare = document.createElement("p");
+    var node1 = document.createTextNode("This is the new text.");
+    pare.appendChild(node1);
+    //pare relace p5 position
+    parent.replaceChild(pare,child);
+</script>
+<h2>3. DOM collection</h2>
+<h3> 3. 1.getElementsByTagName() return HTML Collection Object</h3>
+<p>Hello World!</p>
+<p> Hello China!</p>
+<p id = "demo1"></p>
+<script>
+    var myCollection = document.getElementsByTagName("p");
+    document.getElementById("demo1").innerHTML = 
+    myCollection[0].innerHTML + "<br>" + myCollection.length
+</script>
+<h3>3. 2. getElementsByTagName().length</h3>
+<button onclick = "myFunction()">Have a try to change color </button>
+<script>
+    function myFunction(){
+        var myCollection = document.getElementsByTagName("p");
+        var i;
+        for (i = 0; i < myCollection.length; i++){
+            myCollection[i].style.color = "red";
+        }
+    }
+</script>
+<h3>3.3 HTMLCollection is not array, so you can not use the array methods,like valueOf() pop() push() orjoin()</h3>
 </body>
 </html>
