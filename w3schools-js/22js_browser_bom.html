@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <h2>JS Browser BOM </h2>
+    <h3>JS Window--Browser Object Model (BOM)</h3>
+    <h4>1. Window object </h4>
+    <h4>2. Window size</h4>
+    <p> window .innerHeight <br>
+    window.innerWidth </p>
+    <p id = "demo1"></p>
+    <script>
+        var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+        var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+        var x = document.getElementById("demo1");
+        x.innerHTML = "Width: " + w + "<br>" + "Height: "+ h
+    </script>
+    <h4> 3. Window method </h4>
+    <p> window.open() <br>
+        window.close() <br>
+        window.moveto() <br>
+        window.resizeto() </p>
+    <h3> Js window screen </h3>
+    <h4> 1. window screen object </h4>
+    <p> window.screen.width <br>
+    window.screen.height <br>
+screen.availWidth <br>
+screen.availHeight <br>
+screen.colorDepth <br>
+screen.pixelDepth </p>
+<p id = "demo2"></p>
+<script>
+    document.getElementById("demo2").innerHTML = screen.height;
+
+</script>
+<h4> 4. Window location </h4>
+<p> location href <br>
+    location hostname <br>
+    location pathname <br>
+    location protocal <br>
+    location assign 
+</p>
+<p id = "demo3"></p>
+<script>
+    document.getElementById("demo3").innerHTML = 
+    location.href + "<br>" + 
+    location.hostname + "<br>" + 
+    location.pathname + "<br>" + 
+    location.protocal + "<br>" + 
+    location.port
+    
+</script>
+<input type = "button" value = "Onload the new webpage" onclick = 
+"myFunction()">
+<script>
+    function myFunction(){
+        window.location.assign("https://github.com/0xJungleMonkey/w3schools-html")
+    }
+</script>
+<h3> JS Window History</h3>
+<h4> window history object includes the browser history </h4>
+<p> history.back() method can dowload last Url in the browser history</p>
+<head>
+<script>
+    function goBack(){
+        window.history.back()
+    }
+    function goForward(){
+        window.history.forward()
+    }
+</script>
+</head>
+<body>
+<input type = "button" value = "Back" onclick = "goBack()">
+<p>history.forward() method onload the next url in the history list </p>
+<input type = "button" value = "Forward" onclick = "goForward()">
+<h3> JS Window Navigator</h3>
+<p> window.navigator object includes information about visitor</p>
+<p> navigator.appName <br>
+navigator.appCodeName <br>
+navigator.platform </p>
+<h4> browser cookie </h4>
+<p> if cookie enable, cookieEnabled return true </p>
+<p id = "demo4"> </p>
+<script>
+    document.getElementById("demo4").innerHTML = "navigator.cookieEnabled is : " + navigator.cookieEnabled;
+
+</script>
+<h4> Browser appName </h4>
+<p> appName return the browser's appName </p>
+<p id = "demo5"> </p>
+<script>
+    document.getElementById("demo5").innerHTML= "navigator.appName is :" + navigator.appName;
+</script>
+<h4>Browser appCodeName </h4>
+<p> appCodeName return the browser code name</p>
+<p id = "demo6"></p>
+<script>
+    document.getElementById("demo6").innerHTML = "navigator.appCodeName is : " + navigator.appCodeName;
+</script>
+<h4>Browser product </h4>
+<p id = "demo7"></p>
+<script>
+    document.getElementById("demo7").innerHTML = "navigator.product is :" + navigator.product;
+</script>
+<h4> Browser version </h4>
+<p id = "demo8"> </p>
+<script>
+    document.getElementById("demo8").innerHTML = "navigator.appVersion is : " + navigator.appVersion;
+
+</script>
+<h4> userAgent return user-agent header </h4>
+<p id = "demo9"></p>
+<script>
+    document.getElementById("demo9").innerHTML = "navigator.userAgent is : " + navigator.userAgent;
+</script>
+<h4> platform return platform </h4>
+<p id = "demo10"></p>
+<script>
+    document.getElementById("demo10").innerHTML = "navigator.platform is : " + navigator.platform;
+</script>
+<h4> navigator. language</h4>
+<p id = "demo11"></p>
+<script>
+    document.getElementById("demo11").innerHTML = "navigator.language is : " + navigator.language;
+</script>
+<h4> navigator.online ? </h4>
+<h4> navigator.javaenabled?  </h4>
+<p id = "demo12"></p>
+<script>
+    document.getElementById("demo12").innerHTML = "navigator.online ?" + navigator.onLine + 
+    "<br>" + "Java is enabled ? " + navigator.javaEnabled();
+    
+</script>
+<h3> JS popup</h3>
+<p>Js has 3 kinds of popup: alert confirm or reminder</p>
+<h4> alert popup</h4>
+<p> Grammar: window.alert("sometext")</p>
+<button onclick = "myFunction()">Have a try</button>
+<script>
+    function myFunction(){
+        alert("I am an alert popup!");
+    }
+</script>
+<h4> confirm popup </h4>
+<p>Grammar: window.confirm("sometext")</p>
+<button onclick = "myFunc()">Have a try!</button>
+<p id = "demo13"></p>
+<script>
+    function myFunc(){
+        var txt;
+        if(confirm("Press a button")){
+            txt = "You press the yes "
+        } else {
+            txt = "You press the cancel"
+        }
+        document.getElementById("demo13").innerHTML= txt;
+    }
+</script>
+<h4>reminder</h4>
+<p> window.prompt("sometext","defaultText")</p>
+<button onclick="myFun()">Have a try</button>
+<p id = "demo14"></p>
+<script>
+    function myFun(){
+        var txt;
+        var person = prompt("Please input your name: ","Harry Poter");
+        if(person ==null||person ==""){
+            txt = "User cancel to input";
+        }else {
+            txt = "Hello, " + person + "! How are you doing ?";
+        }
+        document.getElementById("demo14").innerHTML= txt;
+    }
+</script>
+<h4> JS \n the text wrap
+<button onclick = "alert('Hello\nHow are you?')">Have a try!</button>
+<h3> JS Timing Event</h3>
+<p> Timing Events: Js can be executed in time gap </p>
+<h4> Timing event: </h4>
+<p>1. setTimeout(function,milliseconds)  execute function after waiting for certain milliseconds</p>
+<p>clearTimeout() stop execute setTimeout()function
+    <br> window.clearTimeout(timeoutVariable)
+</p>
+<!-- Click "have a try",wait for 3 seconds. The webpage will remind "hello"-->
+<button  onclick = "myVar = setTimeout(myFunction1,3000);">Have a try</button>
+<button onclick = "clearTimeout(myVar)">Stop</button>
+<script>
+    function myFunction1(){
+        alert('Hello');
+    }
+</script>
+<p>2. setInterval(function,milliseconds)  execute function many times<br>
+clearInterval() clear the setInterval() function </p>
+<p>clearInterval(timeVariable)</p>
+<p id = "demo15"></p>
+<script>
+    var myVar1 = setInterval(myTimer,1000);
+    function myTimer(){
+        var d = new Date();
+        document.getElementById("demo15").innerHTML = d.toLocaleTimeString();
+    }
+</script>
+<button onclick = "clearInterval(myVar1)">Stop the timer</button>
+<h2>Js cookies</h2>
+<p> Cookie let you store the user information in the webpage</p>
+
+<P> JS can create\ get or delete cookie by document.cookie</P>
+<p id ="demo16"></p>
+<script>
+    //create a cookie 
+    document.cookie = "username = John Doe; expires=Sun,31 Dec 2021 12:00:00 UTC;path = /";
+    //get cookie 
+    var x = document.cookie;
+    document.getElementById("demo16").innerHTML = x;
+</script>
+</body>
+</html>
