@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Basic form: table tr td</h2>
+    <p> tr table rows <br>
+    td table data</p>
+    <table border = "10px">
+        <tr>
+            <td>1st row, 1 </td>
+            <td>1st row, 2 </td>
+            <td>1st row, 3 </td>
+            <td>1st row, 4</td>
+        </tr>
+        <tr>
+            <td>2nd row, 1</td>
+            <td>2nd row, 2</td>
+            <td>2nd row, 3</td>
+            <td>2nd row, 4</td>
+        </tr>
+    </table>
+    <table border = "10px" style = "border-collapse:collapse ;">
+        <!-- table head data th tag -->
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <tr>
+            <td>1st row, 1 </td>
+            <td>1st row, 2 </td>
+            <td>1st row, 3 </td>
+            <td>1st row, 4</td>
+        </tr>
+        <tr>
+            <td>2nd row, 1</td>
+            <td>2nd row, 2</td>
+            <td>2nd row, 3</td>
+            <td>2nd row, 4</td>
+        </tr>
+    </table>
+    <h2>Merge Cells : rowspan colspan : th tr</h2>
+    <table border ="2" height = "100px" width = "500" style = "border-collapse: collapse;">
+        <tr>
+            <td colspan="2">1</td>
+            <td rowspan="2">2</td>
+            <td colspan="2">3</td>
+            
+        </tr>
+        <tr>
+            <td>4</td>
+            <td rowspan="2">5</td>
+            <td>6</td>
+            <td rowspan="2">7</td>
+
+        </tr>
+        
+        <tr>
+            <td rowspan="2">8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td colspan="2">12</td>
+            <td>13</td>
+        </tr>
+
+    </table>
+</body>
+</html>
