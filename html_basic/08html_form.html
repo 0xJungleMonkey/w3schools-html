@@ -73,5 +73,67 @@
         </tr>
 
     </table>
+    <h2>Form (collect user input)</h2>  
+    <p>basic tags: form form element  </p>  
+    <h3>form attributes: action method: (get post)  name</h3>
+    <form action = "xxx.php" method = "get/post" name= "message">
+    reminder information</form>
+    <h3> form element: input tags; </h3>
+    <h4>input tags: type (text, password)</h4>
+    <form action="data.php" method ="get" name = "first" >
+        <!-- text -->
+        <p>
+            UserName: <input type = "text" value="Please input your username">
+        </p>
+        <!-- password -->
+        <p>
+            PassWord: <input type="password">
+        </p>
+    <!-- radio: same name is necessary -->
+        <p>
+            Gender: <input type="radio" name= "sex">Male
+            <input type = "radio" name = "sex">Female
+        </p>
+        <!-- checkbox -->
+        <p>
+            Hobbies:
+            <input type = "checkbox" name="hobby" > Arts
+            <input type = "checkbox" name="hobby"> Sport
+            <input type = "checkbox" name="hobby"> Language
+            <input type = "checkbox" name="hobby"> IT
+        </p>
+        <!-- default choice -->
+        <p>
+        Sex: <input type="radio" name= "sex" checked="checked">Male
+            <input type = "radio" name = "sex">Female
+        </p>
+        <!-- button -->
+        <p>
+            <input type="button" value= "Button">
+            
+        </p>
+        <!-- reset (clear the input infor) -->
+        <p>
+        <input type="reset" value= "reset">
+    </p>
+        <!-- submit -->
+        <p>
+        <input type="submit" value="submit">
+    </p>
+        <!-- image -->
+        <p>
+        <input type="image" src="JS1.jpeg">
+    </p>
+    <!-- file -->
+    <p>
+     file: <input type="file">
+    </p>
+    <!-- multiple file -->
+    mutiple file:<input type = "file" multiple="multiple">
+    <h3>textarea</h3>
+    induction:
+    <textarea cols="30" rows="20">Please write down the introduction</textarea>
+    </form>
 </body>
+
 </html>
