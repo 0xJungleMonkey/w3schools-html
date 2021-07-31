@@ -133,7 +133,44 @@
     <h3>textarea</h3>
     induction:
     <textarea cols="30" rows="20">Please write down the introduction</textarea>
+    <h3>Drop-down menu</h3>
+    <p> 2 tags: select > option </p>
+    City:
+    <select>
+
+        <optgroup label = "China">
+            <!-- value how to use it? -->
+        <option value="Beijing">Beijing</option>
+        <option value="Guangzhou">Guangzhou </option>
+        <option value="Chengdu">Chengdu</option>
+        <!-- selected attribute set defalut  -->
+        <option value="Shanghai" selected = "selected">shanghai</option>
+    </optgroup>
+    <optgroup label= "Oversea">
+        <option value="">New York</option>
+        <option value="">London </option>
+        <option value="">Amsterdam</option>
+        <option value="">Atlanta</option>
+    </optgroup>
+    </select>
+    <h3>label bind</h3>
+    <p> Method 1 :</p>
+    <p> 1. set id for the form element<br>
+    2. Add the label tag to other element <br>
+    3. Add "for" attributes to label </p>
+    Sex:
+    <input type = "radio" name = "sex" id = "nv"><label for ="nv">Female</label>
+    <input type = "radio" name = "sex" id = "nan"><label for = "nan">Male</label>
+    <h3> label method 2:</h3>
+    <p>When the form element is at the same position with the lable element,
+         we can simplify the grammar</p>
+    Hobby:
+    <label><input type = "checkbox" name = "hobby"> Art</label>
+    <label><input type = "checkbox" name = "hobby">Sport</label>
+    <label><input type = "checkbox" name = "hobby">languages</label>
     </form>
+   
+
 </body>
 
 </html>
