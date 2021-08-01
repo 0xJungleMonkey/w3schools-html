@@ -1,0 +1,55 @@
+/* Word 3 attributes: color, font-family, font-size */
+p {
+color: rgb(0,0,255);
+/* font-family can set multiple choices */
+/* set a popular font-family as planB when we use special font-family */
+font-family:"simsun","Arial";
+/* relative or abosolute 
+relative: px; em ; %;  
+absolute: in; cm; mm; pt*/
+/* font-size should be morethan 14px; 16px is the default size */
+font-size:larger;
+}
+
+/* box model attributes: 
+width; height; background-color */
+div{
+    width:300px;
+    height: 300px;
+    background-color: pink;
+}
+/* id selector: #idName  */
+#id01{
+    color:red;
+}
+.fs16{
+    font-size: larger;
+    color: seagreen;
+}
+/* wildcard selector is useful in small case
+but it's not allowed to use it to delete margin in the real website */
+* {
+    margin:1;
+    padding:1;
+}
+/* Decsendant selectors */
+.box3 ul li p{
+    color:slateblue;
+}
+.box4 p{
+    font-size: 24px;
+}
+/* Intersection selectors */
+p.fs16{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* unior selectors */
+h2,h1{
+    color:#ff0000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+}
+body,h2,p{
+    margin: 5px;
+    padding: 5px;
+}
