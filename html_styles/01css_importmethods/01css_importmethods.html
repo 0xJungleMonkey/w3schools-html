@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS introduction </title>
+    <!--Embed style tag should be written here -->
+    <!-- <style type = "text/css">
+     /* css rules: selector; attributes */
+     p{
+        font-size:30px;
+    }
+    </style> -->
+    <!-- External Css link here -->
+    <!-- Multiple documents link work as well -->
+    <!-- <link rel="stylesheet" href="01.css" type="text/css">
+    <link rel="stylesheet" href="02.css" type="text/css"> -->
+    <!-- Imported CSS here -->
+    <style>
+        @import url(02.css);
+    </style>
+    
+</head>
+<body>
+    <h2>CSS grammar</h2>
+    <h3>CSS Rules: selector; one or more declarations</h3>
+    <p>p{width:300px; font-size:14px}</p>
+    <h3> 4 ways to write CSS: Inline style; Embed style;</h3>
+    <h4>1. Inline: Write CSS style as the html tags' &lt;style&gt; attribute</h4>
+    <p style = "width: 100px;height: 100px;font-size: large; ">This is a paragragh</p>
+    <h4>2. Embed: Write CSS in html &lt;head&gt; tag</h4>
+    <p>&lt;style&gt; is written in the &lt;head&gt;tag  type = "text/css"</p>
+    <h4>3. external css </h4>
+    <p> &lt;link&gt; tag in the &lt;head&gt;<br></p>
+    <h5>&lt;link&gt;attributes</h5>
+    <table border="2px" style="border-collapse: collapse;">
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Description</th>
+
+        </tr>
+        <tr>
+            <td>rel</td>
+            <td>"stylesheet"</td>
+            <td>define the connection between external document
+                 and HTML</td>
+        </tr>
+        <tr>
+            <td>href</td>
+            <td>css document path</td>
+            <td>hypertext reference</td>
+        </tr>
+        <tr>
+            <td>type</td>
+        <td>"text/css"</td>
+        <td>Onload the Css code as plaintext</td>
+    </tr>
+    </table>
+    <h4>imported style sheet</h4>
+    <p>&lt;style&gt; tag in the &lt;head&gt;</p>
+    <p>Grammar:@import url();</p>
+    <p>import method can be used between html and
+         css; between css and css</p>
+    <h3>SUMMARY</h3>
+    <p>Use Embed css in smal case<br>
+    External CSS in big project <br>
+inner css or imported css not recommend</p>
+
+</body>
+
+</html>
