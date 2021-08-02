@@ -1,0 +1,41 @@
+/* Basic selectors:
+Weight:id > class > tag > *
+Latter > Former */
+ #demo{
+    color: slateblue;
+}
+.red{
+    color: red;
+}
+p{
+    color: royalblue;
+}
+*{
+    color: black;
+}
+#demo{
+    color: cadetblue;
+}
+
+/* Senior selectors: 
+Compare the numbers of id, class , tags 
+ */
+body p{
+    color:aquamarine;
+}
+.blue{
+    color: blue;
+}
+#demo1.blue{
+    color:yellowgreen;
+}
+
+/* calculate and  compare the number */
+/* unior selector should be treated as 2 seprate selectors */
+#box1.box2.demo,.box1 #box2 #ps{
+    color: chocolate;
+}
+.box1.box2 #box3 .demo{
+    color:teal;
+}
+

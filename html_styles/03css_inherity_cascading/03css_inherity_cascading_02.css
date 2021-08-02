@@ -1,0 +1,10 @@
+/* !important  have the highest weight*/
+#box4{
+    color: violet; 
+}
+.box5{
+    color: teal;
+}
+.box6{
+    color: tomato !important;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="03css_inherity_cascading_01.css" type="text/css">
+    <link rel="stylesheet" href="03css_inherity_cascading_02.css" type="text/css">
+</head>
+<body>
+    <h3>Word attributes can be inherited; box model attributes cannot.</h3>
+    <h3>Cascading </h3>
+    <div>
+        <h4> 1. select the target label:</h4>
+      <p id="red"> Basic selectors: compare the weight: *&lt;tag selector&lt;class selector&lt;id selector </p>
+        <p class="red" id="demo">When the weight is same, the latter cover the former</p>
+        <p class="blue">Senior selectors:compare the number of id, class,tags</p>
+        <p class="blue" id="demo1">Order:id, class, tag</p>
+    </div>
+    <div class="box1" id="box1">
+        <div class="box2" id="box2">
+            <div class="box3" id="box3">
+                <p class="demo" id="ps">This is a paragragh.</p>
+            </div>
+        </div>
+    </div>
+    <h4>2. Select the ancestor of the target:</h4>
+    <p id="yellow">The first step: proximity principle</p>
+    <div class="box4" id="box4">
+        <div class="box5" id="box5">
+            <div class="box6" id="box6">
+                <p id="ps1">This is a paragragh.</p>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+
+    
