@@ -54,3 +54,19 @@ document.getElementById("demo").innerHTML =
         alert("太难了，还得继续坚持");
       }
     }
+
+    // console.log(true ? 1 : 0);
+    // console.log(false ? 1 : 0);
+
+    // var a = 5;
+    // var b;
+    // if (a >= 5) {
+    //   b = 1;
+    // } else {
+    //   b = 0;
+    // }
+
+    // 给变量赋值，根据条件二选一时，使用三元表达式更简单
+    var a = 4;
+    var b = a >= 5 ? 1 : 0;
+    console.log(b);
