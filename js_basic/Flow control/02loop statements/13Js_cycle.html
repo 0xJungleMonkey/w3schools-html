@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
     <body>
-        <h2>
-            JS FOR cycle
-        </h2>
-        <p> for ( i = 0; i < cars.length; i++) {<br>
-            text += cars[i] + "<br>";
-        }</p>
+      <h2>Loop statements</h2>
+      <h3>1. JS FOR Loop </h3>
+        <p> Grammar:<br>
+          for ( i = 0; the range of i; i++) {<br>
+            statement;
+        }<br>
+        for 循环呆板语法<br>
+         注意：②位置如果为空，或者②条件设置的不合理，
+         也会出现死循环          <br>
+         <b>for 内部可以嵌套 if 语句,嵌套 for 循环</b></p>
         <p id="demo1"></p>
-
-        <script>
-        var cars = ["BMW", "Volvo", "porsche", "Ford"];
-        var i, len, text;
-        for (i = 0, len = cars.length, text = ""; i < len; i++) {
-        text += cars[i] + "<br>";
-        }
-        document.getElementById("demo1").innerHTML = text;
-        </script>
-        <p>带 break 的循环</p>
+        <script src="01loop_for.js">  </script>
+      <h3>2. Do / While loop</h3>
+          <p>do {<br>
+              要执行的代码块<br>
+          }<br>
+          while (条件);</p>
+          <p id="demo02"></p>
+          <script src="02dowhile_loop.js">          </script>
+        
+        
+        <h3> 3. While Loop </h3>
+        <p> while (condition){ <br>
+              xxxxxxxx<br>
+            }
+        </p>
+        <p id="demo3"></p>
+        <script src="03while_loop.js">  </script>
+    <h3>4. 带 break 的循环</h3>
+        <p id="demo4"></p>
+        <script src="04break.js"></script>
+        
         <p id="demo"></p>
-        <script>
-        var text = "";
-        var i;
-        for (i = 0; i < 10; i++) {
-          if (i === 3) { break; }
-          text += "数字是 " + i + "<br>";
-        }
-        document.getElementById("demo").innerHTML = text;
-        </script>
-
-        <p>这个循环在 i=3 时跳过这一步：</p>
-
-        <p id="demo"></p>
-
         <script>
         var text = "";
         var i;
@@ -110,39 +117,7 @@
         document.getElementById("demo2").innerHTML = txt;
         </script>
 
-        <h4> While cycle </h4>
-        <p> while (condition){ <br>
-                xxxxxxxx<br>
-            }
-        </p>
-        <p id="demo3"></p>
+        
 
-<script>
-var text = "";
-var i = 0;
-while (i < 10) {
-  text += "<br>数字是 " + i;
-  i++;
-}
-document.getElementById("demo3").innerHTML = text;
-</script>
-
-<h2>Do / While cycle</h2>
-<p>do {
-    要执行的代码块
-}
-while (条件);</p>
-<p id="demo"></p>
-
-<script>
-var text = ""
-var i = 0;
-do {
-  text += "<br>数字是 " + i;
-  i++;
-}
-while (i < 10);  
-document.getElementById("demo").innerHTML = text;
-</script>
     </body>
 </html>
