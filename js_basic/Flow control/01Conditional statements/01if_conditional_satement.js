@@ -66,7 +66,9 @@ document.getElementById("demo").innerHTML =
     //   b = 0;
     // }
 
-    // 给变量赋值，根据条件二选一时，使用三元表达式更简单
+    // 2. Ternary expression给变量赋值，根据条件二选一时，使用三元表达式更简单
     var a = 4;
     var b = a >= 5 ? 1 : 0;
     console.log(b);
+
+    
