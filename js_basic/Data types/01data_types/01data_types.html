@@ -45,10 +45,57 @@
     </table>
     <script src = "01data_types.js"></script>
 
-    <p>Number 
-        string undefined null Boolean</p>
+    <p>Number string undefined null Boolean</p>
     <h2>1 complicate data type: object</h2>
     <h2>Typeof method: typeof()</h2>
     <h2>Variables' type depends on the data inside.</h2>
+
+
+    <h2>JS Type conversion</h2>
+    <h4>Number()
+         String() 
+         Boolean()</h4>
+    <p> Type : string number boolean object function</p>
+    <p>Object Types: Object Date Array</p>
+    <p>null undefined</p>
+    <h4>typeof operator</h4>
+    <p>typeof 运算符返回变量、对象、函数或表达式的类型。</p>
+    <p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+typeof "john" + "<br>" +
+typeof 3.14 + "<br>" +
+typeof NaN + "<br>" +
+typeof false + "<br>" +
+typeof [1,2,3,4] + "<br>" +
+typeof {name:'john', age:34} + "<br>" +
+typeof new Date() + "<br>" +
+typeof function () {} + "<br>" +
+typeof myCar + "<br>" +
+typeof null;
+/*
+typeof is operator. return string.
+NaN 的数据类型是数值
+数组的数据类型是对象
+日期的数据类型是对象
+null 的数据类型是对象
+未定义变量的数据类型是 undefined
+尚未赋值的变量的数据类型也是 undefined */
+</script>
+<h4>constructor attribute</h4>
+<p>constructor return variable's constructor function</p>
+<p>constructor 属性返回变量或对象的构造器函数。</p>
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = 
+"john".constructor + "<br>" +
+(3.14).constructor + "<br>" +
+false.constructor + "<br>" +
+[1,2,3,4].constructor + "<br>" +
+{name:'john', age:34}.constructor + "<br>" +
+new Date().constructor + "<br>" +
+function () {}.constructor;
+</script>
 </body>
 </html>

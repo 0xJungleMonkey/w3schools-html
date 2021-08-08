@@ -19,3 +19,13 @@ document.getElementById("demo1").innerHTML = text;
           console.log(i,j);
         }
     }
+// for / in statement or/in 语句循环遍历对象的属性。
+    var txt = "";
+    var person = {fname:"Bill", lname:"Gates", age:62}; 
+    var x;
+    for (x in person) {
+      txt += person[x] + " ";
+    }
+    document.getElementById("demo2").innerHTML = txt;
+        
+        

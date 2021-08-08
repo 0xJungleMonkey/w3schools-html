@@ -6,116 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-    <body>
-      <h2>Loop statements</h2>
-      <h3>1. JS FOR Loop </h3>
-        <p> Grammar:<br>
-          for ( i = 0; the range of i; i++) {<br>
-            statement;
-        }<br>
-        for 循环呆板语法<br>
-         注意：②位置如果为空，或者②条件设置的不合理，
-         也会出现死循环          <br>
-         <b>for 内部可以嵌套 if 语句,嵌套 for 循环</b></p>
-        <p id="demo1"></p>
-        <script src="01loop_for.js">  </script>
-      <h3>2. Do / While loop</h3>
-          <p>do {<br>
-              要执行的代码块<br>
-          }<br>
-          while (条件);</p>
-          <p id="demo02"></p>
-          <script src="02dowhile_loop.js">          </script>
-        
-        
-        <h3> 3. While Loop </h3>
-        <p> while (condition){ <br>
-              xxxxxxxx<br>
-            }
-        </p>
-        <p id="demo3"></p>
-        <script src="03while_loop.js">  </script>
-    <h3>4. 带 break 的循环</h3>
-        <p id="demo4"></p>
-        <script src="04break.js"></script>
-        
-        <p id="demo"></p>
-        <script>
-        var text = "";
-        var i;
-        for (i = 0; i < 10; i++) {
-        if (i === 3) { continue; }
-        text += "数字是 " + i + "<br>";
-        }
-        document.getElementById("demo").innerHTML = text;
-        </script>
-        <h2>JS Type conversion</h2>
-        <h4>Number()
-             String() 
-             Boolean()</h4>
-        <p> Type : string number boolean object function</p>
-        <p>Object Types: Object Date Array</p>
-        <p>null undefined</p>
-        <h4>typeof operator</h4>
-        <p>typeof 运算符返回变量、对象、函数或表达式的类型。</p>
-        <p id="demo"></p>
+<body>
+  <h2>Loop statements</h2>
+  <h3>1. JS FOR Loop </h3>
+  <p>for 循环呆板语法<br>
+     Grammar:<br>
+    for ( i = 0; the range of i; i++) {<br>
+      statement;
+    }<br>
+    注意：②位置如果为空，或者②条件设置的不合理，
+    也会出现死循环        </p>
+  <h4>for 内部可以嵌套 if 语句,嵌套 for 循环</h4>
+  <p id="demo1"></p>
 
-    <script>
-    document.getElementById("demo").innerHTML = 
-    typeof "john" + "<br>" +
-    typeof 3.14 + "<br>" +
-    typeof NaN + "<br>" +
-    typeof false + "<br>" +
-    typeof [1,2,3,4] + "<br>" +
-    typeof {name:'john', age:34} + "<br>" +
-    typeof new Date() + "<br>" +
-    typeof function () {} + "<br>" +
-    typeof myCar + "<br>" +
-    typeof null;
-    /*
-    typeof is operator. return string.
-    NaN 的数据类型是数值
-    数组的数据类型是对象
-    日期的数据类型是对象
-    null 的数据类型是对象
-    未定义变量的数据类型是 undefined
-    尚未赋值的变量的数据类型也是 undefined */
-    </script>
-    <h4>constructor attribute</h4>
-    <p>constructor return variable's constructor function</p>
-    <p>constructor 属性返回变量或对象的构造器函数。</p>
-    <p id="demo"></p>
-    <script>
-    document.getElementById("demo").innerHTML = 
-    "john".constructor + "<br>" +
-    (3.14).constructor + "<br>" +
-    false.constructor + "<br>" +
-    [1,2,3,4].constructor + "<br>" +
-    {name:'john', age:34}.constructor + "<br>" +
-    new Date().constructor + "<br>" +
-    function () {}.constructor;
-    </script>
+  <h4>for/in 语句循环遍历对象的属性。</h4>
+  <p>for (variable in object){
+          statement
+      }</p>
+  <p id="demo2"></p>
+  <script src="01loop_for.js">  </script>
+  <h3>2. Do / While loop</h3>
+  <p>do {<br>
+      要执行的代码块<br>
+    }while (条件);</p>
+  <p id="demo02"></p>
+  <script src="02dowhile_loop.js">          </script>
+  <h3> 3. While Loop </h3>
+  <p> while (condition){ <br>
+      xxxxxxxx;<br>
+      }</p>
+  <p id="demo3"></p>
+  <script src="03while_loop.js">  </script>
+  <h3>4. 带 break 的循环</h3>
+  <p id="demo4"></p>
+  <script src="04break.js"></script>    
+  <p>break 只能打断本层的循环,如果想终止外层循环，需要给外层循环添加一个名字.</p>
     
 
-
-
-
-        <p>for/in 语句循环遍历对象的属性。</p>
-        <p>for (variable in object){
-          the code waiting for running
-        }
-        </p>
-        <p id="demo2"></p>
         
-        <script>
-        var txt = "";
-        var person = {fname:"Bill", lname:"Gates", age:62}; 
-        var x;
-        for (x in person) {
-          txt += person[x] + " ";
-        }
-        document.getElementById("demo2").innerHTML = txt;
-        </script>
+
+        
 
         
 
