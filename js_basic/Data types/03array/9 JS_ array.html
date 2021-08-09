@@ -2,12 +2,9 @@
 <html>
     <body>
         <h1> JS Array</h1>
+        <h3>1. 创建数组</h3>
+        <p>var array-name = [item1,item2,item3......]</p>
         <p id = "demo"></p>
-        <script>
-            var cars = ["Audi","BMW","porsche"];
-            // var array-name = [item1,item2,item3......]
-            document.getElementById("demo").innerHTML = cars;
-        </script>
         <p> Keyword new  (not necessary to use)</p>
         <p id = "demo1"></p>
         <script>
@@ -15,25 +12,16 @@
             document.getElementById("demo1").innerHTML = car + "<br>" + 
             car[0]+ car[2];
         </script>
-        <p>Access array elements</p>
+        <h3>2. 获取数组element /Access array elements</h3>
         <p id = "demo2"></p>
-        <script> 
-        var person = {firstName:"Bill",lastName:"Gates", age: 62};
-        var cars = ["Audi","BMW","porsche"];
-        cars[0] = "Opel";
-        cars[3] = person;
+        <h3>3. 更改数组中某一项的值</h3>
         
-        document.getElementById("demo2").innerHTML = "The type of array " + cars + "is "+ typeof cars + "<br>"+ person.firstName;     
-        </script>
-        <h1> The type of JS Array is Object. </h1>
+        <h3>4. 获取数组的长度</h3>
         <p> length property</p>
         <p id = "demo3"></p>
-        <script>
-            var fruits = ["Banana","Orange","Apple","Mango"];
-            var last = fruits[fruits.length-1];
-            document.getElementById("demo3").innerHTML = fruits.length + "<br>" + 
-            last;
-        </script>
+        <h3>5. 更改数组的长度</h3>
+        <h1> The type of JS Array is Object. </h1>
+        
         <h1> Traverse array elements</h1>
         <p>1. for cycle</p>
         <p id = "demo4"></p>
