@@ -2,11 +2,12 @@
 import requests
 
 # api-endpoint
-URL = 'https://egov.uscis.gov/casestatus/mycasestatus.do?appReceiptNum=';
+URL = 'https://egov.uscis.gov/casestatus/mycasestatus.do?appReceiptNum='
 PREFIX = "WAC" #your prefix in the receipt number
-START_NUMBER = "2190042278 - 10"
-MINE = "2190042278"
-END_NUMBER = "2190042278 + 10"
+START_NUMBER = 2190042268
+MINE = 2190042278
+END_NUMBER = 2190042288
+
 
 f =open('before.txt','w')
 # sending get request and saving the response as response object
