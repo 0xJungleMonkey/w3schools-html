@@ -1,63 +1,51 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        <p id="monkey"></p>
-        <script>
-            function myFunction(p1,p2){
-            // function name(function parameters1,function parameters2){
-            //          ^
-            //}
-                return p1*p2;
-            }
-            document.getElementById("monkey").innerHTML = myFunction(7,8);
-        </script>
-        <p id="monkey1"></p>
-        <script>
-            var X=yourFunction(8,8);
-            document.getElementById("monkey1").innerHTML=X;
-            function yourFunction(a,b){
-                return a+b;
-            }
-        </script>
-        <p id = "monkey2">        </p>
-        <script>
-        document.getElementById("monkey2").innerHTML="The tempreature is:" + fToc(88) + "Celsius.";
-        function fToc(fahrenheit){
-            return(5/9)*(fahrenheit-32);
-        }
-        </script>
-        <h3>Function expression</h3>
-        <p>var x = function(p1,p2){return a*b}</p>
-        <p>函数can store variable , 存储在变量后，变量可以用作函数：</p>
-<p id="demo"></p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <h3>1. Function Basic</h3>
+  <h4>1.1 function declaration 函数声明</h4>
+  <p>函数必须先定义才能使用 <br>
+    函数名命名规则：可以使用字母、数字、下划线、$，<br>
+    数字不能作为开头，区分大小写，不能使用关键字和保留字</p>
+  <h4>1.2 function grammar:<br>
+    function name(function parameters1,function parameters2){<br>
+        statement <br>
+    }</h4>
+  <p id ="ne"></p>
+  <h4>1.3  Function parameters</h4>
+  <p id ="monkey2"></p>
+  <h4>1.4 Function return value </h4>
+  <h4>1.5 Function expression </h4>
+  <p>var x = function(p1,p2){return a*b}</p>
+  <p>函数can store variable , 存储在变量后，变量可以用作函数：</p>
+  <p id ="monkey1"></p>
+  <p id="demo"></p>
 
-<script>
-var x = function (a, b) {return a * b};
-document.getElementById("demo").innerHTML = x(4, 3);
-</script>
-<h3> Call itself function</h3>
-<p>可以在不调用的情况下自动调用函数：</p>
-
-<p id="demo1"></p>
-
-<script>
-(function () {
-  document.getElementById("demo1").innerHTML = "Hello! I called myself";
-})();
-</script>
-
-<h3>Function property: functionName.length return the numbers of parameters called </h3>
-   
-<p>arguments.length 属性返回函数接收的参数数量：</p>
-
+  <h3>2. Function date type </h3>
+  <script src="02function_data_type.js"></script>
+  <h3>3. Function call 
+    Call itself function</h3>
+  <p id="demo1"></p>
+  <p>可以在不调用的情况下自动调用函数：</p>
+  <script src="01function.js"></script>
+ 
+  <h3>4. Function property:  </h3>
+  <p>arguments.length return the numbers of parameters called <br>
+    arguments.length 属性返回函数接收的参数数量：</p>
 <p id="demo2"></p>
 
-<script>
+
 function myFunction(a, b) {
   return arguments.length;
 }
 document.getElementById("demo2").innerHTML = myFunction(4, 3);
-</script>
+
 <h3>Function method : toString() return function by string</h3>
 <p>toString() 方法将函数作为字符串返回：</p>
 <p id="demo3"></p>
@@ -113,6 +101,7 @@ function sumAll() {
 }
 document.getElementById("demo6").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
 </script>
+<script src="04function_attributs_methods.js"></script>
 <h3> 3 ways to call function</h3>
 <p> call function in function way <br>
 call function in object method
@@ -209,7 +198,7 @@ document.getElementById("demo8").innerHTML = x;
 
   <p>function (functioon1())()使用局部变量计数。</p>
   
-  <p id="demo12">0</p>
+  <p id="demo12"></p>
   
   <script>
   document.getElementById("demo12").innerHTML = add();
@@ -226,7 +215,7 @@ document.getElementById("demo8").innerHTML = x;
   
   <button type="button" onclick="myFunction()">计数！</button>
   
-  <p id="demo13">0</p>
+  <p id="demo13"></p>
   
   <script>
   var add = (function () {
@@ -238,5 +227,6 @@ document.getElementById("demo8").innerHTML = x;
     document.getElementById("demo13").innerHTML = add();
   }
   </script>
+  
 </body>
 </html>
