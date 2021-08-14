@@ -14,13 +14,20 @@
     // 调用函数中，给小括号内部添加数据
     sum(3,4);
     sum("3",4);
-// 
+// Function parameters
     document.getElementById("monkey2").innerHTML=
     "The tempreature is:" + fToc(88) + "Celsius.";
     function fToc(fahrenheit){
         return(5/9)*(fahrenheit-32);
     }
-
+// 将默认值设置为函数参数
+function myFunction(x, y) {
+  if (y === undefined) {
+    y = 0;
+  }  
+  return x * y;
+}
+document.getElementById("demo4").innerHTML = myFunction(4);
 //1.3 Function return value 
  // 定义一个求和函数，传入两个数据
     // 参数：传两个参数，数据类型为数字
@@ -70,15 +77,9 @@ function yourFunction(c,d){
     return c + d;
 }
 
-//4.  
-(function () {
-    document.getElementById("demo1").innerHTML = "Hello! I called myself";
-  })();
 
-// 
-function myFunction(a, b) {
-    return arguments.length;
-}
-document.getElementById("demo2").innerHTML = myFunction(4, 3);
+
+
+
 
 

@@ -43,4 +43,38 @@
     console.log(sum(1));
     console.log(sum(1,2));
     console.log(sum(1,2,3));
-    console.log(sum(1,2,3,4,5));
+    // console.log(sum(1,2,3,4,5));
+
+// Arguments object 
+function myFunction(a, b) {
+  return arguments.length;
+}
+document.getElementById("demo2").innerHTML = myFunction(4, 3);
+
+// Arguments object 
+function findMax() {
+  var i;
+  var max = -Infinity;
+  for(i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+} 
+document.getElementById("demo5").innerHTML = findMax(4, 5, 6);
+// Arguments object case 2 
+function sumAll() {
+  var i;
+  var sum = 0;
+  for(i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+document.getElementById("demo6").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+//2. toString()
+function mFunction(a, b) {
+  return a * b;
+}
+document.getElementById("demo3").innerHTML = mFunction.toString();
