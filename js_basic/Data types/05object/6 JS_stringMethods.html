@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
-    <body>
-        
-        <h1> JavaScript String property</h1>
-        
-        <p> 1. length property </p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h3> JavaScript String Objects</h3>
+        <h4> 1. length property </h4>
         <p id="demo"></p>
         <script>
             var txt = 
@@ -12,7 +16,7 @@
             document.getElementById("demo").innerHTML=txt.length;
         </script>
 
-        <p>2. indexOf() method: first time </p>
+        <h4>2. indexOf() method: first time </h4>
         <!-- indexOf() right  indexof() wrong-->
         <p id="demo2"></p>
         <script>
@@ -29,7 +33,7 @@
 
         </script>
 
-        <p>3. lastIndexOf() the last time </p>
+        <h4>3. lastIndexOf() the last time </h4>
         <p id="demo4"></p>
         <script>
             var str3 = "The full name of China is the People's Republic of China.";
@@ -37,13 +41,16 @@
             document.getElementById("demo4").innerHTML = pos3;
         </script>
 
-        <p>4. lastIndexOf() accept 2nd parameter</p>
+        <p>lastIndexOf() accept 2nd parameter</p>
         <p id = "demo5"></p>
         <script>
             var str4 = "The full name of China is the People's Republic of China.";
             var pos4 = str4.lastIndexOf("China",50);
             document.getElementById("demo5").innerHTML = pos4;
         </script>
+
+        <h4>4. charAt() return the character at index number</h4>
+
         <p>5. search()method [= indexOf()]</p>
         <p id = "demo6"></p>
         <script>
