@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
 <body>
     <h2> JS Array</h2>
@@ -33,11 +40,11 @@
     <script src="01arraybasic.js"></script>
     <h3> 2. Traverse array elements</h3>
     <h4> 2.1for loop</h4>
-    <h4>2.2 Array.foreach() </h4>
+    <h4>2.2  Array iteration method Array.foreach() </h4>
     <p id="demo5"></p>
     <script src="02array_ traverse.js"></script>
-    
-    
+
+
     <h3>3. JS Array Method</h3>
     <h4>3.1. Array to String toString() or join()</h4>
     <p id="demo10"></p>
@@ -59,7 +66,7 @@
     <p id="demo15"></p>
     <p id="demo16"></p>
     <p id="demo17"></p>
-    
+
     <h4>3.4 Splice()</h4>
     <p> 1. Use splice() to add or replace new elements <br>
         ArrayName.splice(where to splice, how many elements
@@ -68,142 +75,41 @@
     <p>2. Use splice(start,number) to delete elements <br></p>
     <p id="demo18"></p>
     <p id="demo19"></p>
-    
+
     <h4>3.5.concat() and slice(start,end)</h4>
     <p>Concat()</p>
     <p id="demo20"></p>
-    <h5>slice() </h5>
+    <p>slice() </p>
     <p id="demo21"></p>
-    <script src="03array_methods.js"></script>
-    
-    <h3>4. Index methods</h3>
-    <h4> Array indexOf()</h4>
-    <p> indexOf() search elements value and return the postion </p>
-    <p id="demo32"></p>
-    <script>
-        var fruits = ["Apple", "Orange", "Apple", "Mango"];
-        var a = fruits.indexOf("Apple", 1);
-        //array.indexOf(item,start)
-        document.getElementById("demo32").
-            innerHTML = "Apple postion: " + (a + 1);
-    </script>
-    <h4>Array.lastIndexOf()</h4>
+    <script src="03array_methods_outside.js"></script>
+
+    <h4>4.1 Index methods</h4>
+    <p> 1.Array indexOf()/Array.lastIndexOf()</p>
+    <p> array.indexOf(item,start) <br>
+        indexOf() search elements value and return the postion </p>
     <p> lastIndexOf() is similiar to indexof <br>
         search from last to start </p>
-    <p id="demo33"></p>
-    <h4>Array.find()</h4>
+    <p id="demo32"></p>
+
+    <p>2. Array.find()</p>
     <p>find() return the first element that pass the function test</p>
-    <script>
-        var numbers = [45, 6, 17, 34, 25];
-        var first = numbers.find(myFunction);
-        document.getElementById("demo33").innerHTML =
-            "The first element which is bigger than 18: " + first;
-        function myFunction(value, index, array) {
-            return value > 18;
-        }
-    </script>
-    <h4>Array.findIndex()</h4>
-    <p>findIndex() return the index of first element which pass the test</p>
-    <p id="demo34"></p>
-    <script>
-        var numbers = [45, 6, 17, 34, 25];
-        var first = numbers.findIndex(myFunction);
-        document.getElementById("demo34").innerHTML = "The first element which is bigger than 18: " + first;
-        function myFunction(value, index, array) {
-            return value > 18;
-        }
-    </script>
-    <h4>9. Array sorting</h4>
-    <h4>10. Array reverse</h4>
+    <p id="demo33"></p>
+
+    <h4>4.2 Array sorting</h4>
+    <p>1. Array.reverse()</p>
+    <p>2. Array.sort()</p>
     <p id="demo22"></p>
-    <script>
-        var fruits = ["Banana", "Orange", "Apple", "Mango"];
-        //First sort the array
-        var x = fruits.sort();
-        //Then reverse it 
-        var y = fruits.reverse();
-        document.getElementById("demo22").innerHTML = fruits;
-    </script>
-    <h4>Array numbers sorting need use functions </h4>
-    <p id="demo23"></p>
+    <p>Array numbers sorting need use functions </p>
+    <p>3. sort numbers in array</p>
+    <p id="demo0"></p>
     <button onclick="comparePoints()">Click here to sort array</button>
-    <script>
-        var numbers = [100, 25, 39, 19, 9];
-        document.getElementById("demo23").
-            innerHTML = numbers;
-
-        function comparePoints() {
-            numbers.sort(function (a, b) { return a - b });
-
-            //ascending: function(a,b){return a - b}
-            //descending: function(a,b){return a - b}
-            //random: function(a,b){return 0.5 - Math.random()}
-            document.getElementById("demo23").
-                innerHTML = numbers + "<br>" + numbers[0] +
-                "<br>" + numbers[numbers.length - 1];
-            //numbers: return the array;
-            //numbers[numbers.length-1]: return the Maximum
-            //numbers[0]: return the Minimum.
-
-            //Maximum: function comparePoints(arr){
-            //           return Math.max.apply(null,arr);
-            //         }
-            //Minimum: function comparePoints(arr){
-            //           return Math.min.apply(null,arr);
-            //         }
-            //Math.min.apply([1,2,3]) = Math.min(1,2,3)
-            //Math.max.apply([1,2,3]) = Math.max(1,2,3)
-        }
-    </script>
-    <h4>Sort object array</h4>
+    <p id="demo23"></p>
+    <p>4. sort() compare object array</p>
     <p id="demo24"></p>
-    <button onclick="myFunction()">Sorting</button>
-    <script>
-        var cars = [
-            { type: "BMW", year: 2017 },
-            { type: "Audi", year: 2019 },
-            { type: "porsche", year: 2018 }
-        ];
-
-        displayCars();
-
-        function myFunction() {
-            cars.sort(function (a, b) { return a.year - b.year });
-            displayCars();
-        }
-        // if compare string:
-        //function myFunction() {
-        //   cars.sort(function(a, b){
-        //   var x = a.type.toLowerCase();
-        //    var y = b.type.toLowerCase();
-        //    if (x < y) {return -1;}
-        //    if (x > y) {return 1;}
-        //    return 0;
-        //  });
-        //  displayCars();
-        //}
-
-
-        function displayCars() {
-            document.getElementById("demo24").innerHTML =
-                cars[0].type + " " + cars[0].year + "<br>" +
-                cars[1].type + " " + cars[1].year + "<br>" +
-                cars[2].type + " " + cars[2].year;
-        }
-    </script>
-    <h2> Array iteration method</h2>
-    <h4> Array.foreach()</h4>
-    <p id="demo25"> </p>
-    <script>
-        var txt = "";
-        var numbers = [45, 4, 9, 16, 25];
-        number.foreach(myFunction);
-        document.getElementById("demo25").innerHTML = txt;
-
-        function myFunction(value, index, array) {
-            txt = txt + value + "<br>";
-        }
-    </script>
+    <button onclick="compareObjects()">Sorting</button>
+    <script src="04array_index_methods.js"></script>
+    
+  
     <h4> Array.map()</h4>
     <p id="demo26"></p>
     <script>
@@ -282,7 +188,7 @@
             return value > 18;
         }
     </script>
-    
+
 </body>
 
 </html>

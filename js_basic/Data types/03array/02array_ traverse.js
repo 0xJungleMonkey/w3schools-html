@@ -13,12 +13,22 @@
     }
     console.log(arr);
 //2.2 foreach method 
-    var fruits, text;
-    fruits = ["Banana","Orange","Apple","Mango"];
-    text = "<ul>";
-    fruits.foreach(myFunction);
-    text +="</ul>";
-    document.getElementById("demo5").innerHTML = text;
-    function myFunction(value){
-    text += "<li>" + value +"</li>";
-    }
+    // var fruits, text;
+    // fruits = ["Banana","Orange","Apple","Mango"];
+    // text = "<ul>";
+    // fruits.foreach(myFunction);
+    // text +="</ul>";
+    // document.getElementById("demo5").innerHTML = text;
+    // function myFunction(value){
+    // text += "<li>" + value +"</li>";
+    // }
+
+    // var txt = "";
+    // var numbers = [45, 4, 9, 16, 25];
+    // let list = Array.from(numbers);
+    // list.foreach(mFunc);
+    // document.getElementById("demo5").innerHTML = txt;
+
+    // function mFunc(value, index, array) {
+    // txt = txt + value + "<br>";
+    // }

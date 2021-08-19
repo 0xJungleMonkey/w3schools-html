@@ -61,3 +61,5 @@ var cit = fruits3.slice(1, 3);
 //It is acceptable if there is no finish Index Number.
 document.getElementById("demo21").
     innerHTML = fruits3 + "<br>" + citrus + "<br>" + cit;
+
+
