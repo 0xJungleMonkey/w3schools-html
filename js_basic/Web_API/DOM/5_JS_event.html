@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        div {
+          width: 200px;
+          height: 200px;
+          background-color: pink;
+        }
+        .hide {
+          display: none;
+        }
+        .show {
+          display: block;
+        }
+      </style>
+</head>
+<body>
+    <!-- <input type="button" id="btn" value="点击有惊喜" onclick="alert('点我做什么？')"> -->
+    <input type="button" id="btn" value="点击有惊喜">
+    <script>
+        // 获取元素
+        var btn = document.getElementById("btn");
+        // 添加绑定事件
+        btn.onclick = function () {
+            // 定义的是事件被触发后要做的事情
+            alert("点我干嘛？");
+        };
+    </script>
+     <button onclick="document.getElementById('demo').innerHTML=Date()">The current time is ?</button>
+     <p id="demo"></p>
+<!-- <element event="Javescript"-->
+    <button onclick="this.innerHTML=
+    Date()">时间是？</button>
+<!-- <element event="Javescript"-->
+    <button onclick="displayDate()">
+    What is the current time?</button>
+    <script>
+        function displayDate(){
+            document.getElementById("demo2").innerHTML = Date();
+        }
+    </script>
+    <p id="demo2"></p>
+    
+    <h3>3. Hide or Show up the element</h3>
+        <input type="button" value="点击隐藏" id="btn1">
+        <div id="box1"></div>
+    <script>
+    // 获取元素
+    var btn1 = document.getElementById("btn1");
+    var box1 = document.getElementById("box1");
+    // 点击按钮，让 div 显示或隐藏
+    // box.style.display = "none";
+    // btn1.onclick = function () {
+    //   // 元素 div 当前是显示的，需要让他隐藏
+    //   // 根据 按钮 的 value 值进行条件判断
+    //   if (btn1.value === "点击隐藏") {
+    //     box1.className = "hide";
+    //     btn1.value = "点击显示";
+    //   } else {
+    //     box1.className = "show";
+    //     btn1.value = "点击隐藏";
+    //   }
+    // };
+// USE this in event.
+
+        btn1.onclick = function () {
+      // 元素 div 当前是显示的，需要让他隐藏
+      // 根据 按钮 的 value 值进行条件判断
+      if (this.value === "点击隐藏") {
+        box1.className = "hide";
+        this.value = "点击显示";
+      } else {
+        box1.className = "show";
+        this.value = "点击隐藏";
+      }      
+    }
+
+
+</script>
+</body>
+</html>
