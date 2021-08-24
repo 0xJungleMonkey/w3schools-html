@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <h3>01_window 对象</h3>
+    <p> // window 对象是 BOM 中的一个顶层对象，其他的对象都是 window 的子对象。
+        <br>// document 对象就是 window 的一个子对象
+        <br>// console.dir(window.document);
+
+        <br>// 输出 window 对象
+        <br>// window 对象在调用属性和方法时，可以省略 window 不写
+    </p>
+    <br> // 在全局作用域定义的全局变量，都是 window 的一个属性
+    <br> // window 中 的特殊属性 name,如果定义新的变量，只会在原来的 name 属性上进行赋值，并且只能是字符串格式的值
+    <br> // top 属性 在 window 中，属性值指向的就是顶层对象 window,这个属性是只读的，不能后期更改。
+    <h3>02_对话框</h3>
+
+    <body>
+        <p>// 警示框</p>
+        <input type="button" value="alert" id="btn1">
+        <p>// 提示框</p>
+        <input type="button" value="prompt" id="btn2">
+        <p>// confirm 方法有返回值，根据按钮点击情况，如果点击确定 返回 true，如果点击取消 返回 false</p>
+        <input type="button" value="confirm" id="btn3">
+
+        <h3>03_window onload加载事件</h3>
+        <h3>04 setTimeout 延时器</h3>
+        <h4>函数节流操作</h4>
+        <input type="button" id="btn" value="点击按钮">
+
+        <h3>05 定时器setInterval(function,milliseconds) execute function many times<br>
+            clearInterval() clear the setInterval() function </h3>
+        <p>clearInterval(timeVariable)</p>
+        <p id="demo15"></p>
+        <button onclick="clearInterval(myVar1)">Stop the timer</button>
+       
+<script src="01bom.js"></script>
+
+    </body>
+
+</html>

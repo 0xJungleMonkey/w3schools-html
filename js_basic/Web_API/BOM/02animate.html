@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(02animate.css);
+    </style>
+</head>
+
+<body>
+    <h3> setInterval to make Animate</h3>
+    <h4>5.1简单运动</h4>
+    <input type="button" value="开始" id="start1">
+    <input type="button" value="结束" id="end1">
+    <div class="box1" id="box1"></div>
+    <p>
+        // 存在问题：多次点击定时器按钮会加速，点击结束无法清除所有定时器，只能清除最后一个定时器。
+    </p>
+    <h4>5.2解决方式：设表先关</h4>
+    <p>// 定时器写在事件函数内部，会由于事件多次被触发，导致定时器累积
+        <br>// 解决方法：设表先关，每次重新开启一个定时器之前都先关闭一下之前的定时器
+    </p>
+    <h4>5.3拉终停表</h4>
+    <p>// 拉终停表，走到规定的终点位置 后自动清除定时器</p>
+    <script src="02_1animate_简单运动.js"></script>
+
+    <h4>5.4步标整除 在规定时间内，走完规定距 </h4>
+
+    <h4>5.5 封装动画函数 可多次调用</h4>
+    <input type="button" value="开始" id="start2">
+    <input type="button" value="结束" id="end2">
+    <div class="box2" id="box2"></div>
+    <script src="02_2animate_高级无缝滚动轮播.js"></script>
+    <h3>6. 简单无缝滚动轮播图案例</h3>
+  <div class="scroll" id="scroll">
+    <div class="inner">
+      <ul id="munit">
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/1.jpeg" height="130px" alt="美女" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/2.jpeg" height="130px" alt="美女2" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/3.jpeg" height="130px" alt="美女3" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/4.jpeg" height="130px" alt="美女4" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/depositphotos_22499805-stock-photo-portrait-of-young-beautiful-girl.jpg" height="130px" alt="美女4" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/prettygirls.jpg" height="130px" alt="美女4" /></li> 
+      </ul>
+    </div>
+  </div>
+  <script src="common.js"></script>
+    <script src="02_3简单无缝滚动轮播.js"></script>
+    <h3>7. 完整切换效果轮播图</h3>
+    <div class="carousel" id="carousel">
+      <ul class="pic" id="pic">
+          <li class="current"><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/1.jpeg" height="330px" alt="美女" /></li> alt=""></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/2.jpeg" height="330px" alt="美女2" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/3.jpeg" height="330px" alt="美女3" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/4.jpeg" height="330px" alt="美女4" /></li>
+        <li><img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/prettygirls.jpg" height="330px" alt="美女4" /></li> 
+      </ul>
+      <div class="btn" id="btn">
+          <a href="javascript:;" class="left" id="leftbtn">&lt;</a>
+          <a href="javascript:;" class="right" id="rightbtn">&gt;</a>
+      </div>
+      <ol class="sub" id="sub">
+          <li class="current"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </ol>
+  </div>
+<script src="02_4完整切换效果轮播图.js"></script>
+</body>
+
+</html>

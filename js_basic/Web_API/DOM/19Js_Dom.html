@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-
-
-
+    <style>
+        @import url(01DOM.css);
+    </style>
 </head>
 
 <body>
@@ -59,9 +58,18 @@
     <p>获取元素<br>
         调用元素对象的属性，从而操作 HTML 中标签的属性<br>
         等号赋值，值必须是字符串类型的</p>
-    <script src="01DOM.js"></script>
-    
-    <h4>5. document.forms</h4>
+
+
+    <h4>3. forms element attributes </h4>
+    <p>textarea input form</p>
+    <h4>Example1:</h4>
+    <input type="button" value="按钮" id="btn"><br>
+    <input type="text" id="txt">
+    <select id="list">
+        <option value="beijing">北京</option>
+        <option value="shanghai">上海</option>
+    </select>
+    <p>Example2</p>
     <form id="frm1" action="/demo5/action_Page.php">First name:<input type="text" name="fname" value="Bill"> <br>
         Last name :<input type="text" name="lname" value="gates"><br>
         <input type="submit" value="Submit">
@@ -69,16 +77,74 @@
     <p>Click the "have a try" button to show the value of form</p>
     <button onclick="myFunction()">have a try!</button>
     <p id="demo5"></p>
-    <script>
-        function myFunction() {
-            var x = document.forms["frm1"];
-            var text = "";
-            var i;
-            for (i = 0; i < x.length; i++) {
-                text += x.elements[i].value + "<br>";
-            }
-            document.getElementById("demo5").innerHTML = text;
-        }
+    <p>Example3</p>
+    <p>检测用户名是否是3-6位，密码是否是6-8位，如果不满足要求高亮显示文本框</p>
+    <input type="text" id="name"><br>
+    <input type="text" id="pw"><br>
+    <input type="button" id="bttn" value="提交">
+    <p>Example4</p>
+    <input type="button" value="选择" id="btn4">
+    <br>
+    <select id="food">
+        <option>烤肉</option>
+        <option>拉面</option>
+        <option>麻辣烫</option>
+        <option>小龙虾</option>
+        <option>火锅</option>
+        <option>外卖</option>
+    </select>
+    <p>Example5</p>
+    <input type="text" class="gray" value="请输入搜索关键字" id="txtSearch">
+    <input type="button" value="搜索" id="btnSearch">
+    <p>Example6</p>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="all" />
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Pro</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Air</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Apple Watch</td>
+                    <td>2000</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <input type="button" value="  反 选  " id="btn6">
+    </div>
+    <script src="01DOM.js"></script>
+
+
     </script>
     <h3>HTML Dom change CSS</h3>
     <h4>1. change html style</h4>

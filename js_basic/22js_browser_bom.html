@@ -192,18 +192,8 @@ navigator.platform </p>
         alert('Hello');
     }
 </script>
-<p>2. setInterval(function,milliseconds)  execute function many times<br>
-clearInterval() clear the setInterval() function </p>
-<p>clearInterval(timeVariable)</p>
-<p id = "demo15"></p>
-<script>
-    var myVar1 = setInterval(myTimer,1000);
-    function myTimer(){
-        var d = new Date();
-        document.getElementById("demo15").innerHTML = d.toLocaleTimeString();
-    }
-</script>
-<button onclick = "clearInterval(myVar1)">Stop the timer</button>
+
+
 <h2>Js cookies</h2>
 <p> Cookie let you store the user information in the webpage</p>
 
