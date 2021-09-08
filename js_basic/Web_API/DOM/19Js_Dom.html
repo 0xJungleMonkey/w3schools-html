@@ -9,6 +9,7 @@
     <style>
         @import url(01DOM.css);
     </style>
+    <script src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/BOM/common.js"></script>
 </head>
 
 <body>
@@ -55,9 +56,8 @@
     <a href="http://www.baidu.com" title="跳转到百度页面" id="link">跳转</a>
     <img src="w3schools-html/html_basic/images/solidity2.png" alt="solidity2" class="pic" id="pic">
     <button type="button" onclick="changePic()">Change picture</button>
-    <p>获取元素<br>
-        调用元素对象的属性，从而操作 HTML 中标签的属性<br>
-        等号赋值，值必须是字符串类型的</p>
+    <p>获取元素<br> 调用元素对象的属性，从而操作 HTML 中标签的属性<br> 等号赋值，值必须是字符串类型的
+    </p>
 
 
     <h4>3. forms element attributes </h4>
@@ -70,8 +70,7 @@
         <option value="shanghai">上海</option>
     </select>
     <p>Example2</p>
-    <form id="frm1" action="/demo5/action_Page.php">First name:<input type="text" name="fname" value="Bill"> <br>
-        Last name :<input type="text" name="lname" value="gates"><br>
+    <form id="frm1" action="/demo5/action_Page.php">First name:<input type="text" name="fname" value="Bill"> <br> Last name :<input type="text" name="lname" value="gates"><br>
         <input type="submit" value="Submit">
     </form>
     <p>Click the "have a try" button to show the value of form</p>
@@ -142,96 +141,49 @@
         </table>
         <input type="button" value="  反 选  " id="btn6">
     </div>
-    <script src="01DOM.js"></script>
+    <script src="01dom_change_html.js"></script>
 
-
-    </script>
-    <h3>HTML Dom change CSS</h3>
-    <h4>1. change html style</h4>
+    <h2>HTML Dom change CSS</h2>
+    <p>1.更改类名的方式去更改样式 // 2.根据对象的 style 属性去操作样式</p>
+    <h3>1. change html style <br> 根据对象的 style 属性去操作样式
+    </h3>
     <p><b>Grammar:document.getElementById("id").style.property = new style </b> </p>
+
     <p id="p1">Hello World!</p>
     <p id="p2">Hello World</p>
-    <script>
-        document.getElementById("p2").style.color = "blue";
-        document.getElementById("p2").style.fontFamily = "Arial";
-        document.getElementById("p2").style.fontSize = "larger";
-    </script>
     <p> The second paragragh style has been changed</p>
-    <h4>2. use events</h4>
-    <p>browser will make an events:<br>
-        click elements;<br>
-        page loading;<br>
-        input is changed;<br>
-    </p>
-    <h3 id="id1">My title</h3>
-    <button type="button" onclick="document.getElementById('id1').
-style.color = 'red'">Click here</button>
 
-    <h2> HTML Dom Animation</h2>
-    <h3> 1. Create animate container<br>
-        2. Add style <br>
-        3. Animation code</h3>
-    <!--Set style -->
-    <style>
-        #container {
-            width: 400px;
-            height: 350px;
-            position: relative;
-            background: yellowgreen;
-        }
-
-        #animate {
-            width: 100px;
-            height: 50px;
-            position: absolute;
-            background-color: red;
-
-        }
-    </style>
-    <p> <button onclick="myMove()">Click here to start animation</button></p>
-    <!--Create a container-->
-    <div id="container">
-        <div id="animate"><br><b>I love gorilla!</b></div>
+    <h3>2.更改类名的方式去更改样式</h3>
+    <h4 id="id1" class="">My title</h4>
+    <button id="btn90">Click here to change style of "My title"</button>
+    <script src="02dom_change_css.js"></script>
+    <h3>Example1: Turn on / off the light
+    </h3>
+    <input type="button" value="关灯" id="btn91">
+    <h3>Example2:Hide or show the element</h3>
+    <div class="box" id="box">
+        <div class="erweima hide" id="er">
+            <img src="/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/1.jpeg" alt="wherer " />
+        </div>
     </div>
     <script>
-        function myMove() {
-            var elem = document.getElementById("animate");
-            var pos = 0;
-            var id = setInterval(frame, 5);
-            function frame() {
-                if (pos == 300) {
-                    clearInterval(id);
-                } else {
-                    pos++;
-                    elem.style.top = pos + "px";
-                    elem.style.left = pos + "px";
-                }
-            }
-        }
-    </script>
-    <h2> HTML Dom event</h2>
-    <h3>1.Feedback to events (onclick = JS)</h3>
-    <p onclick="this.innerHTML='Thank you!'">hello</p>
-    <h3>2. Events attributes</h3>
-    <button onclick="displayDate()">The date is : </button>
-    <script>
-        function displayDate() {
-            document.getElementById("demo6").innerHTML =
-                Date();
-        }
-    </script>
-    <p id="demo6"></p>
-    <h3>3. Dom assigns events</h3>
-    <button id="myBtn">Have a try</button>
-    <p id="demo7"></p>
-    <script>
-        document.getElementById("myBtn").onclick = displayDat;
-        function displayDat() {
-            document.getElementById("demo7").innerHTML = Date();
-        }
+        // 获取元素
+        var box = my$("box");
+        var er = my$("er");
+        // 给 box 添加鼠标移上事件 onmouseover ，添加鼠标离开事件 onmouseout
+        box.onmouseover = function() {
+            // 让子级元素进行显示，就是将 hide 改为 show
+            // er.className = "erweima show";
+            er.className = er.className.replace("hide", "show");
+        };
+        box.onmouseout = function() {
+            // 让子级元素进行隐藏，就是将 show 改为 hide
+            // er.className = "erweima hide";
+            er.className = er.className.replace("show", "hide");
+        };
     </script>
 
-    <p><br><br></p>
+
 
 </body>
 

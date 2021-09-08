@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,84 +8,116 @@
     <title>Document</title>
     <style>
         * {
-          margin: 0;
-          padding: 0;
+            margin: 0;
+            padding: 0;
         }
+        
         div {
-          width: 200px;
-          height: 200px;
-          background-color: pink;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
         }
+        
         .hide {
-          display: none;
+            display: none;
         }
+        
         .show {
-          display: block;
+            display: block;
         }
-      </style>
+    </style>
 </head>
+
 <body>
+    <h4>2. use events</h4>
+    <p>browser will make an events:<br> click elements;<br> page loading;<br> input is changed;<br>
+    </p>
     <!-- <input type="button" id="btn" value="点击有惊喜" onclick="alert('点我做什么？')"> -->
     <input type="button" id="btn" value="点击有惊喜">
     <script>
         // 获取元素
         var btn = document.getElementById("btn");
         // 添加绑定事件
-        btn.onclick = function () {
+        btn.onclick = function() {
             // 定义的是事件被触发后要做的事情
             alert("点我干嘛？");
         };
     </script>
-     <button onclick="document.getElementById('demo').innerHTML=Date()">The current time is ?</button>
-     <p id="demo"></p>
-<!-- <element event="Javescript"-->
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The current time is ?</button>
+    <p id="demo"></p>
+    <!-- <element event="Javescript"-->
     <button onclick="this.innerHTML=
     Date()">时间是？</button>
-<!-- <element event="Javescript"-->
+    <!-- <element event="Javescript"-->
     <button onclick="displayDate()">
     What is the current time?</button>
     <script>
-        function displayDate(){
+        function displayDate() {
             document.getElementById("demo2").innerHTML = Date();
         }
     </script>
     <p id="demo2"></p>
-    
+
     <h3>3. Hide or Show up the element</h3>
-        <input type="button" value="点击隐藏" id="btn1">
-        <div id="box1"></div>
+    <input type="button" value="点击隐藏" id="btn1">
+    <div id="box1"></div>
     <script>
-    // 获取元素
-    var btn1 = document.getElementById("btn1");
-    var box1 = document.getElementById("box1");
-    // 点击按钮，让 div 显示或隐藏
-    // box.style.display = "none";
-    // btn1.onclick = function () {
-    //   // 元素 div 当前是显示的，需要让他隐藏
-    //   // 根据 按钮 的 value 值进行条件判断
-    //   if (btn1.value === "点击隐藏") {
-    //     box1.className = "hide";
-    //     btn1.value = "点击显示";
-    //   } else {
-    //     box1.className = "show";
-    //     btn1.value = "点击隐藏";
-    //   }
-    // };
-// USE this in event.
+        // 获取元素
+        var btn1 = document.getElementById("btn1");
+        var box1 = document.getElementById("box1");
+        // 点击按钮，让 div 显示或隐藏
+        // box.style.display = "none";
+        // btn1.onclick = function () {
+        //   // 元素 div 当前是显示的，需要让他隐藏
+        //   // 根据 按钮 的 value 值进行条件判断
+        //   if (btn1.value === "点击隐藏") {
+        //     box1.className = "hide";
+        //     btn1.value = "点击显示";
+        //   } else {
+        //     box1.className = "show";
+        //     btn1.value = "点击隐藏";
+        //   }
+        // };
+        // USE this in event.
 
-        btn1.onclick = function () {
-      // 元素 div 当前是显示的，需要让他隐藏
-      // 根据 按钮 的 value 值进行条件判断
-      if (this.value === "点击隐藏") {
-        box1.className = "hide";
-        this.value = "点击显示";
-      } else {
-        box1.className = "show";
-        this.value = "点击隐藏";
-      }      
-    }
+        btn1.onclick = function() {
+            // 元素 div 当前是显示的，需要让他隐藏
+            // 根据 按钮 的 value 值进行条件判断
+            if (this.value === "点击隐藏") {
+                box1.className = "hide";
+                this.value = "点击显示";
+            } else {
+                box1.className = "show";
+                this.value = "点击隐藏";
+            }
+        }
+    </script>
+
+    <h2> HTML Dom event</h2>
+    <h3>1.Feedback to events (onclick = JS)</h3>
+    <p onclick="this.innerHTML='Thank you!'">hello</p>
+    <h3>2. Events attributes</h3>
+    <button onclick="displayDate()">The date is : </button>
+    <script>
+        function displayDate() {
+            document.getElementById("demo6").innerHTML =
+                Date();
+        }
+    </script>
+    <p id="demo6"></p>
+    <h3>3. Dom assigns events</h3>
+    <button id="myBtn">Have a try</button>
+    <p id="demo7"></p>
+    <script>
+        document.getElementById("myBtn").onclick = displayDat;
+
+        function displayDat() {
+            document.getElementById("demo7").innerHTML = Date();
+        }
+    </script>
 
 
-</script>
+
 </body>
+
 </html>

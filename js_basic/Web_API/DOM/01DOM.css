@@ -1,17 +1,24 @@
 /* 3.3 form element attributes */
-.bg{
+
+.bg {
     background: yellow;
 }
+
+
 /* 3.5 */
+
 .gray {
     color: gray;
-  }
+}
 
-  .black {
+.black {
     color: black;
-  }
+}
+
+
 /* 3.6 */
-  * {
+
+* {
     padding: 0;
     margin: 0;
 }
@@ -52,4 +59,48 @@ tbody tr {
 tbody tr:hover {
     cursor: pointer;
     background-color: #fafafa;
+}
+
+.cls {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+.blue {
+    font-size: 40px;
+    color: blueviolet;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Example2 Hide or show the element */
+
+.box {
+    width: 50px;
+    height: 50px;
+    background: url(/home/monkey/Documents/w3schools-html/js_basic/Web_API/DOM/pic_gallery/images/1.jpeg) no-repeat -159px -51px;
+    position: fixed;
+    right: 10px;
+    top: 40%;
+}
+
+.erweima {
+    position: absolute;
+    top: 0;
+    left: -150px;
+}
+
+.box a {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
